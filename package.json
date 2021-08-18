@@ -1,0 +1,23 @@
+{
+  "name": "no",
+  "version": "1.0.0",
+  "description": "Projet 3 du parcours Developpeur Web sur OpenClassRoom",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./Sass/main.scss:./CSS/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Scrantonicity2/StephaneMercier_03_16082021.git"
+  },
+  "keywords": [
+    "Projet3",
+    "Ohmyfood"
+  ],
+  "author": "Mercier Stephane",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Scrantonicity2/StephaneMercier_03_16082021/issues"
+  },
+  "homepage": "https://github.com/Scrantonicity2/StephaneMercier_03_16082021#readme"
+}
