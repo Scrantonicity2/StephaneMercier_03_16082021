@@ -118,6 +118,9 @@ a {
   opacity: 0.5;
   margin: 0 20px 0 -5px;
 }
+.btn__icon :active {
+  color: #e4d5f6;
+}
 
 .restaurants__gray__bg {
   background: #eaeaea;

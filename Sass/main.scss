@@ -117,6 +117,9 @@ a {
 .btn__icon {
   opacity: 0.5;
   margin: 0 20px 0 -5px;
+  :active {
+    color: #e4d5f6;
+  }
 }
 
 .restaurants__gray__bg {

@@ -19,6 +19,7 @@
   </head>
   <body>
     <header>
+      <!-- Banner LOGO -->
       <div class="logo__main">
         <div class="title">
           <img
@@ -30,22 +31,26 @@
       </div>
     </header>
     <main>
+      <!-- Map marker and City Location -->
       <section class="location__block">
         <div class="location__block__text">
           <span class="fas fa-map-marker-alt marker__icon"></span>
           <p class="location__block__text__spec">Paris, Belleville</p>
         </div>
       </section>
+      <!-- Reservation Menu plus Button leading to Restaurants Section -->
       <section class="nav__menu">
         <h1 class="nav__menu__title">Réservez le menu qui vous convient</h1>
         <p class="nav__menu__title__sub">
           Découvrez des restaurants d'exception, séléctionnés par nos soins.
         </p>
+        <!-- Button -->
         <button class="btn__radient">
           <a href="#anchor__restaurants__list">Explorer nos restaurants</a>
         </button>
       </section>
       <section class="container">
+        <!-- "How to" section -->
         <h1 class="functionning__menu__title">Fonctionnement</h1>
         <div class="functionning__menu__list">
           <div class="functionning__menu__btn__main">
@@ -71,12 +76,16 @@
           </div>
         </div>
       </section>
+      <!-- Restaurants Section with links to Restaurant page -->
       <section id="anchor__restaurants__list" class="restaurants__gray__bg">
         <div class="container">
           <h1>Restaurants</h1>
           <div class="restaurants__cards__list">
             <article class="restaurant__cards__list card">
-              <a href="#" class="restaurant__card__anchor">
+              <a
+                href="./Restaurants/palette.html"
+                class="restaurant__card__anchor"
+              >
                 <div class="restaurant__card__img">
                   <div class="restaurant__card__img__new">
                     <div class="img__caption">Nouveau</div>
@@ -94,7 +103,10 @@
               </div>
             </article>
             <article class="restaurant__cards__list card">
-              <a href="#" class="restaurant__card__anchor">
+              <a
+                href="./Restaurants/note.html"
+                class="restaurant__card__anchor"
+              >
                 <div class="restaurant__card__img">
                   <div class="restaurant__card__img__new">
                     <div class="img__caption">Nouveau</div>
@@ -112,7 +124,10 @@
               </a>
             </article>
             <article class="restaurant__cards__list card">
-              <a href="#" class="restaurant__card__anchor">
+              <a
+                href="./Restaurants/francaise.html"
+                class="restaurant__card__anchor"
+              >
                 <div class="restaurant__card__img">
                   <img
                     src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
@@ -127,7 +142,10 @@
               </a>
             </article>
             <article class="restaurant__cards__list card">
-              <a href="#" class="restaurant__card__anchor">
+              <a
+                href="./Restaurants/delice.html"
+                class="restaurant__card__anchor"
+              >
                 <div class="restaurant__card__img">
                   <img
                     src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
@@ -146,6 +164,7 @@
       </section>
     </main>
   </body>
+  <!-- Footer dark Bg and white color font -->
   <footer>
     <div class="container">
       <section class="footer__menu">
@@ -156,16 +175,16 @@
             alt="logo Ohmyfood"
           />
         </div>
-        <div class="footer__option">
+        <a href="#" class="footer__option">
           <span class="fas fa-utensils footer__icon"></span
           ><span>Proposer un restaurant</span>
-        </div>
-        <div class="footer__option">
+        </a>
+        <a href="#" class="footer__option">
           <span class="fas fa-handshake footer__icon"></span
           ><span>Devenir partenaire</span>
-        </div>
-        <div class="footer__option">Mentions légales</div>
-        <div class="footer__option">Contact</div>
+        </a>
+        <a href="#" class="footer__option">Mentions légales</a>
+        <a href="#" class="footer__option">Contact</a>
       </section>
     </div>
   </footer>
