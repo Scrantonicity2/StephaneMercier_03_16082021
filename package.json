@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Scrantonicity2/StephaneMercier_03_16082021/issues"
   },
-  "homepage": "https://github.com/Scrantonicity2/StephaneMercier_03_16082021#readme"
+  "homepage": "https://github.com/Scrantonicity2/StephaneMercier_03_16082021#readme",
+  "devDependencies": {
+    "sass": "^1.38.0"
+  }
 }
