@@ -4,7 +4,7 @@
   "description": "Projet 3 du parcours Developpeur Web sur OpenClassRoom",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./Sass/main.scss:./CSS/style.css"
+    "sass": "sass --watch ./src/sass/main.scss:./dist/css/style.css"
   },
   "repository": {
     "type": "git",

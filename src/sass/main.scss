@@ -177,3 +177,19 @@ footer {
 .footer__option {
   margin-bottom: 10px;
 }
+
+// reduire tailles photos
+// pour le "nouveau" sur les photos, utilise position relative et absolute
+// mettre la photo dans le CSS directement, en background
+// check "background-size: contain" ou ":cover"
+// <div
+// style="position: relative; background-image: url(images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg); height: 250px; background-size: cover;"
+// class="restaurant__card__img">
+// <div style="position: absolute; width: 100%; display: flex; justify-content: flex-end;"
+//   class="img__caption">
+//   <span
+//     style="padding: 5px; background-color: greenyellow; margin: 20px; top: 0; left: 0;">Nouveau</span>
+// </div>
+
+// </div>
+// couleur logo footer (Css filter: invert(1))
