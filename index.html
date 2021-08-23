@@ -9,7 +9,7 @@
       src="https://kit.fontawesome.com/032f209c78.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="dist/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -35,7 +35,7 @@
       <section class="location__block">
         <div class="location__block__text">
           <span class="fas fa-map-marker-alt marker__icon"></span>
-          <p class="location__block__text__spec">Paris, Belleville</p>
+          <span class="location__block__text__spec">Paris, Belleville</span>
         </div>
       </section>
       <!-- Reservation Menu plus Button leading to Restaurants Section -->
@@ -44,7 +44,7 @@
         <p class="nav__menu__title__sub">
           Découvrez des restaurants d'exception, séléctionnés par nos soins.
         </p>
-        <!-- Button -->
+        <!-- Explore Button -->
         <button class="btn__radient">
           <a href="#anchor__restaurants__list">Explorer nos restaurants</a>
         </button>
@@ -82,80 +82,84 @@
           <h1>Restaurants</h1>
           <div class="restaurants__cards__list">
             <article class="restaurant__cards__list card">
-              <a
-                href="./Restaurants/palette.html"
-                class="restaurant__card__anchor"
-              >
+              <a href="./pages/palette.html" class="restaurant__card__anchor">
                 <div class="restaurant__card__img">
                   <div class="restaurant__card__img__new">
-                    <div class="img__caption">Nouveau</div>
-                    <img
+                    <div class="img__caption">
+                      <span class="img__caption--box">Nouveau</span>
+                    </div>
+                    <!-- <img
                       src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
                       alt="Restaurant La palette du goût"
-                    />
+                    /> -->
                   </div>
                 </div>
               </a>
               <div class="restaurant__card__info">
-                <div class="restaurant__card__name">La palette du goût</div>
+                <div class="restaurant__card__name">
+                  <div>La palette du goût</div>
+                  <span class="far fa-heart radientPrimarySecondary"></span>
+                </div>
                 <div class="restaurant__card__location">Ménilmontant</div>
-                <span class="far fa-heart radientPrimarySecondary"></span>
               </div>
             </article>
             <article class="restaurant__cards__list card">
-              <a
-                href="./Restaurants/note.html"
-                class="restaurant__card__anchor"
-              >
+              <a href="./pages/note.html" class="restaurant__card__anchor">
                 <div class="restaurant__card__img">
                   <div class="restaurant__card__img__new">
-                    <div class="img__caption">Nouveau</div>
+                    <div class="img__caption">
+                      <span class="img__caption--box">Nouveau</span>
+                    </div>
                   </div>
-                  <img
+                  <!-- <img
                     src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
                     alt="Photo table avec repas"
-                  />
+                  /> -->
                 </div>
                 <div class="restaurant__card__info">
-                  <div class="restaurant__card__name">La note enchantée</div>
+                  <div class="restaurant__card__name">
+                    <div>
+                      La note enchantée
+                      <span class="far fa-heart radientPrimarySecondary"></span>
+                    </div>
+                  </div>
                   <div class="restaurant__card__location">Charonne</div>
-                  <span class="far fa-heart radientPrimarySecondary"></span>
                 </div>
               </a>
             </article>
             <article class="restaurant__cards__list card">
-              <a
-                href="./Restaurants/francaise.html"
-                class="restaurant__card__anchor"
-              >
+              <a href="./pages/francaise.html" class="restaurant__card__anchor">
                 <div class="restaurant__card__img">
-                  <img
+                  <!-- <img
                     src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
                     alt="Photo table avec repas"
-                  />
+                  /> -->
                 </div>
                 <div class="restaurant__card__info">
-                  <div class="restaurant__card__name">À la française</div>
+                  <div class="restaurant__card__name">
+                    <div>
+                      À la française
+                      <span class="far fa-heart radientPrimarySecondary"></span>
+                    </div>
+                  </div>
                   <div class="restaurant__card__location">Cité Rouge</div>
-                  <span class="far fa-heart"></span>
                 </div>
               </a>
             </article>
             <article class="restaurant__cards__list card">
-              <a
-                href="./Restaurants/delice.html"
-                class="restaurant__card__anchor"
-              >
+              <a href="./pages/delice.html" class="restaurant__card__anchor">
                 <div class="restaurant__card__img">
-                  <img
+                  <!-- <img
                     src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
                     alt="Photo table avec repas"
-                  />
+                   /> -->
                 </div>
                 <div class="restaurant__card__info">
-                  <div class="restaurant__card__name">Le délice des sens</div>
+                  <div class="restaurant__card__name">
+                    <div>Le délice des sens</div>
+                    <span class="far fa-heart radientPrimarySecondary"></span>
+                  </div>
                   <div class="restaurant__card__location">Folie-Méricourt</div>
-                  <span class="far fa-heart"></span>
                 </div>
               </a>
             </article>
