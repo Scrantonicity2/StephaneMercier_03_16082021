@@ -157,9 +157,6 @@ a {
   object-fit: cover;
   background-size: cover;
   border-radius: 20px 20px 0 0;
-  & .note {
-    background: url(/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
-  }
 }
 
 .img__caption {
@@ -231,6 +228,10 @@ footer {
   margin-bottom: 10px;
 }
 
+.fa-handshake {
+  transform: rotate(-45deg);
+}
+
 // reduire tailles photos
 // pour le "nouveau" sur les photos, utilise position relative et absolute
 // mettre la photo dans le CSS directement, en background
@@ -246,3 +247,75 @@ footer {
 
 // </div>
 // couleur logo footer (Css filter: invert(1))
+
+// SASS for "La palette du goût"
+
+.logo__main__page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fa-arrow-left {
+  margin: 10px 50px 0 -40px;
+}
+
+.restaurant__menu {
+  background-color: #eaeaea;
+}
+
+.background__restaurant__img {
+  position: relative;
+  background: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+  width: 100%;
+  height: 180px;
+  background-size: cover;
+}
+
+.restaurant__menu__name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Shrikhand", sans-serif;
+  position: relative;
+  font-size: 17px;
+}
+
+h3 {
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+
+.border__bottom {
+  width: 35px;
+  border-bottom: 3px solid #99e2d0;
+  margin-top: -10px;
+}
+
+.palette__card {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+.dish__name {
+  font-weight: bolder;
+  margin: 0 0 5px 0;
+}
+
+.flex__caption__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.dish__caption {
+  opacity: 0.6;
+  font-size: 0.8rem;
+}
+
+.order__btn {
+  margin: 30px 30px 0 70px;
+}
