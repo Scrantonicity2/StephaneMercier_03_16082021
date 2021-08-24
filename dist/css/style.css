@@ -149,6 +149,10 @@ a {
   height: 130px;
   object-fit: cover;
   background-size: cover;
+  border-radius: 20px 20px 0 0;
+}
+.restaurant__card__img .note {
+  background: url(/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
 }
 
 .img__caption {
@@ -156,9 +160,12 @@ a {
   display: flex;
   justify-content: flex-end;
   position: absolute;
+  font-weight: 600;
+  font-size: 12px;
 }
 
 .img__caption--box {
+  color: #3a8000;
   padding: 5px;
   margin: 10px;
   background-color: #99e2d0;
@@ -174,12 +181,19 @@ a {
   display: flex;
   justify-content: space-between;
   font-weight: 600;
-  font-size: 1.2rem;
-  margin-right: 10px;
+  font-size: 1rem;
+  margin: 0 10px 0 0;
+}
+
+.fa-heart {
+  margin-top: 5px;
+  font-size: 1.5rem;
+  opacity: 0.2;
 }
 
 .restaurant__card__location {
   opacity: 0.6;
+  margin: -5px 0 10px 0;
 }
 
 footer {
@@ -196,6 +210,14 @@ footer {
   color: white;
   display: flex;
   flex-direction: column;
+}
+
+.footer__icon {
+  margin-right: 10px;
+}
+
+.icon__text {
+  margin-left: 7px;
 }
 
 .footer__option {
