@@ -1,4 +1,6 @@
-.btn__radient {
+// Bouton "Commander" et Bouton "Explorer nos restaurants"
+
+@mixin btn__radient {
   width: 70%;
   height: 45px;
   padding: 10px;
@@ -7,4 +9,7 @@
   box-shadow: 2px 2px 5px lightslategrey;
   background: linear-gradient(165deg, #ff79da, #9356dc);
   color: whitesmoke;
+  :hover {
+    filter: 110%;
+  }
 }

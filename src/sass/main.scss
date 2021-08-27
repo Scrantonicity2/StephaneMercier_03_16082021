@@ -1,3 +1,56 @@
+$btn-color: linear-gradient(165deg, #ff79da, #9356dc);
+
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  // top: 0;
+  // right: 0;
+  // bottom: 0;
+  z-index: 9999;
+  background: #fff;
+  visibility: hidden;
+  transition: visibility 2500ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader--spinner {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border: 5px solid #eeeeee;
+  border-radius: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  ::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 5px solid transparent;
+    border-radius: 250px;
+    border-top: 5px double #99e2d0;
+    border-left: 5px double #9356dc;
+    border-right: 5px double #ff79da;
+    border-bottom: 5px double black;
+    animation: loader--spinner 2.5s ease-in-out infinite;
+  }
+}
+
+@keyframes loader--spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 body {
   font-family: "Roboto", sans-serif;
   margin: 0px;
@@ -108,8 +161,11 @@ a {
   border-radius: 20px;
   border: none;
   box-shadow: 2px 2px 5px lightslategrey;
-  background: linear-gradient(165deg, #ff79da, #9356dc);
+  background: $btn-color;
   color: whitesmoke;
+  &:hover {
+    filter: brightness(110%);
+  }
 }
 
 .container {
@@ -124,7 +180,7 @@ a {
 
 .functionning__menu__btn__main {
   margin-bottom: 15px;
-  :active {
+  :hover {
     background: #e4d5f6;
   }
 }
@@ -288,22 +344,6 @@ footer {
   transform: rotate(-45deg);
 }
 
-// reduire tailles photos
-// pour le "nouveau" sur les photos, utilise position relative et absolute
-// mettre la photo dans le CSS directement, en background
-// check "background-size: contain" ou ":cover"
-// <div
-// style="position: relative; background-image: url(images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg); height: 250px; background-size: cover;"
-// class="restaurant__card__img">
-// <div style="position: absolute; width: 100%; display: flex; justify-content: flex-end;"
-//   class="img__caption">
-//   <span
-//     style="padding: 5px; background-color: greenyellow; margin: 20px; top: 0; left: 0;">Nouveau</span>
-// </div>
-
-// </div>
-// couleur logo footer (Css filter: invert(1))
-
 // SASS for "La palette du goût"
 
 .logo__main__page {
@@ -406,5 +446,8 @@ h3 {
 }
 
 .order__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 30px 30px 0 70px;
 }
