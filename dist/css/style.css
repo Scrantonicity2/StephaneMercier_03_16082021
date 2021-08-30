@@ -1,3 +1,46 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+@keyframes loader--spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50px);
+  }
+}
+@keyframes rotate__icon {
+  0% {
+    transition: rotate(180deg);
+  }
+  100% {
+    transition: rotate(-180deg);
+  }
+}
 .loader {
   position: fixed;
   width: 100%;
@@ -5,7 +48,7 @@
   z-index: 9999;
   background: #fff;
   visibility: hidden;
-  transition: visibility 2500ms;
+  transition: visibility 1500ms both;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,13 +71,12 @@
   left: -5px;
   right: -5px;
   bottom: -5px;
-  border: 5px solid transparent;
   border-radius: 250px;
   border-top: 5px double #99e2d0;
   border-left: 5px double #9356dc;
   border-right: 5px double #ff79da;
   border-bottom: 5px double black;
-  animation: loader--spinner 2.5s ease-in-out infinite;
+  animation: loader--spinner 2.5s ease infinite;
 }
 
 @keyframes loader--spinner {
@@ -45,21 +87,6 @@
     transform: rotate(360deg);
   }
 }
-body {
-  font-family: "Roboto", sans-serif;
-  margin: 0px;
-  padding: 0px;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
 .logo__main {
   display: flex;
   justify-content: center;
@@ -98,7 +125,7 @@ a {
 }
 
 .nav__menu {
-  background: linear-gradient(white, #eeeeee);
+  background: linear-gradient(#fff, #eeeeee);
   padding: 20px 20px 50px 20px;
   display: flex;
   flex-direction: column;
@@ -121,7 +148,7 @@ a {
   border: none;
   box-shadow: 2px 2px 5px lightslategrey;
   background: linear-gradient(165deg, #ff79da, #9356dc);
-  color: whitesmoke;
+  color: #fff;
 }
 .btn__radient:hover {
   filter: brightness(110%);
@@ -143,11 +170,15 @@ a {
 .functionning__menu__btn__main :hover {
   background: #e4d5f6;
 }
+.functionning__menu__btn__main :hover .btn__icon {
+  color: #9356dc;
+  opacity: 1;
+}
 
 .btn__number {
   width: 30px;
   height: 30px;
-  color: white;
+  color: #fff;
   border-radius: 20px;
   background: #9356dc;
   display: flex;
@@ -172,9 +203,6 @@ a {
 .btn__icon {
   opacity: 0.5;
   margin: 0 20px 0 -5px;
-}
-.btn__icon :active {
-  color: #e4d5f6;
 }
 
 .restaurants__gray__bg {
@@ -281,7 +309,7 @@ footer {
 }
 
 .footer__menu {
-  color: white;
+  color: #fff;
   display: flex;
   flex-direction: column;
 }
@@ -296,6 +324,9 @@ footer {
 
 .footer__option {
   margin-bottom: 10px;
+}
+.footer__option :hover {
+  font-style: italic;
 }
 
 .fa-handshake {
@@ -365,7 +396,7 @@ footer {
 }
 
 h3 {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   opacity: 0.6;
 }
 
@@ -376,11 +407,62 @@ h3 {
 }
 
 .menu__card {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 70px;
   background-color: #fff;
   border-radius: 20px;
-  padding: 10px;
-  margin-top: 15px;
+  padding: 1rem;
+  margin-top: 1rem;
   box-shadow: 3px 3px #eaeaea;
+  overflow: hidden;
+}
+.menu__card:hover .check__wrapper {
+  -webkit-animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.menu__card:hover .icon__circle--rotate {
+  animation: rotate__icon 0.8s both;
+}
+
+.check__wrapper {
+  width: 4rem;
+  margin: -1rem -5rem -1rem -1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 20px 20px 0;
+  background-color: #99e2d0;
+  color: #fff;
+}
+
+.icon__circle--rotate {
+  font-size: 30px;
+  margin-left: -15px;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50px);
+  }
+}
+@keyframes rotate__icon {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.dish__info {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .dish__name {
@@ -389,11 +471,11 @@ h3 {
   margin: 0 0 5px 0;
 }
 
-.flex__caption__price {
+.dish__price {
+  padding-left: 0.5rem;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-right: 10px;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 
 .dish__caption {
@@ -405,7 +487,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 30px 30px 0 70px;
+  margin: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,16 +1,16 @@
-$btn-color: linear-gradient(165deg, #ff79da, #9356dc);
+@import "./base/reset", "./base/typography";
+@import "./utils/mixins";
+@import "./utils/variables";
+@import "./utils/keyframes";
 
 .loader {
   position: fixed;
   width: 100%;
   height: 100%;
-  // top: 0;
-  // right: 0;
-  // bottom: 0;
   z-index: 9999;
-  background: #fff;
+  background: $background-white;
   visibility: hidden;
-  transition: visibility 2500ms;
+  transition: visibility 1500ms both;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,7 +20,7 @@ $btn-color: linear-gradient(165deg, #ff79da, #9356dc);
   position: relative;
   width: 250px;
   height: 250px;
-  border: 5px solid #eeeeee;
+  border: 5px solid $background-grey;
   border-radius: 250px;
   display: flex;
   align-items: center;
@@ -32,13 +32,13 @@ $btn-color: linear-gradient(165deg, #ff79da, #9356dc);
     left: -5px;
     right: -5px;
     bottom: -5px;
-    border: 5px solid transparent;
+
     border-radius: 250px;
     border-top: 5px double #99e2d0;
     border-left: 5px double #9356dc;
     border-right: 5px double #ff79da;
     border-bottom: 5px double black;
-    animation: loader--spinner 2.5s ease-in-out infinite;
+    animation: loader--spinner 2.5s ease infinite;
   }
 }
 
@@ -51,11 +51,6 @@ $btn-color: linear-gradient(165deg, #ff79da, #9356dc);
   }
 }
 
-body {
-  font-family: "Roboto", sans-serif;
-  margin: 0px;
-  padding: 0px;
-}
 // lds-ring {
 //   display: inline-block;
 //   position: relative;
@@ -92,15 +87,6 @@ body {
 //   }
 // }
 
-* {
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
 .logo__main {
   display: flex;
   justify-content: center;
@@ -119,7 +105,7 @@ a {
 .location__block {
   display: flex;
   justify-content: center;
-  background-color: #eeeeee;
+  background-color: $background-grey;
   margin-top: 3px;
   padding: 10px 0;
   opacity: 0.7;
@@ -139,7 +125,7 @@ a {
 }
 
 .nav__menu {
-  background: linear-gradient(white, #eeeeee);
+  background: linear-gradient($background-white, $background-grey);
   padding: 20px 20px 50px 20px;
   display: flex;
   flex-direction: column;
@@ -162,7 +148,7 @@ a {
   border: none;
   box-shadow: 2px 2px 5px lightslategrey;
   background: $btn-color;
-  color: whitesmoke;
+  color: $background-white;
   &:hover {
     filter: brightness(110%);
   }
@@ -183,14 +169,18 @@ a {
   :hover {
     background: #e4d5f6;
   }
+  :hover .btn__icon {
+    color: $primary-color;
+    opacity: 1;
+  }
 }
 
 .btn__number {
   width: 30px;
   height: 30px;
-  color: white;
+  color: $background-white;
   border-radius: 20px;
-  background: #9356dc;
+  background: $primary-color;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -206,20 +196,17 @@ a {
   justify-content: flex-start;
   align-items: center;
   border-radius: 20px;
-  background: #eeeeee;
+  background: $background-grey;
   padding-right: 30px;
 }
 
 .btn__icon {
   opacity: 0.5;
   margin: 0 20px 0 -5px;
-  :active {
-    color: #e4d5f6;
-  }
 }
 
 .restaurants__gray__bg {
-  background: #eeeeee;
+  background: $background-grey;
 }
 
 .restaurants__cards__list {
@@ -228,7 +215,7 @@ a {
 
 .card {
   width: 100%;
-  background-color: #fff;
+  background-color: $background-white;
   border-radius: 20px;
   margin-bottom: 20px;
 }
@@ -284,7 +271,7 @@ a {
   color: rgb(58, 128, 0);
   padding: 5px;
   margin: 10px;
-  background-color: #99e2d0;
+  background-color: $tertiary-color;
 }
 
 .restaurant__card__info {
@@ -313,7 +300,7 @@ a {
 }
 
 footer {
-  background: #353535;
+  background: $background-footer;
 }
 
 .logo__footer--white {
@@ -323,7 +310,7 @@ footer {
 }
 
 .footer__menu {
-  color: white;
+  color: $background-white;
   display: flex;
   flex-direction: column;
 }
@@ -338,18 +325,18 @@ footer {
 
 .footer__option {
   margin-bottom: 10px;
+  :hover {
+    font-style: italic;
+  }
 }
 
 .fa-handshake {
   transform: rotate(-45deg);
 }
 
-// SASS for "La palette du goût"
-
+// SASS Restaurants Pages
 .logo__main__page {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-center;
 }
 
 .fa-arrow-left {
@@ -357,7 +344,7 @@ footer {
 }
 
 .restaurant__main {
-  background-color: #eeeeee;
+  background-color: $background-grey;
 }
 
 .container__restaurant {
@@ -366,7 +353,7 @@ footer {
 }
 
 .restaurant__menu {
-  background-color: #eeeeee;
+  background-color: $background-grey;
   position: relative;
   border-radius: 30px 30px 0 0;
   top: -26px;
@@ -409,22 +396,74 @@ footer {
 }
 
 h3 {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   opacity: 0.6;
 }
 
 .border__bottom {
   width: 35px;
-  border-bottom: 3px solid #99e2d0;
+  border-bottom: 3px solid $tertiary-color;
   margin-top: -10px;
 }
 
 .menu__card {
-  background-color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 70px;
+  background-color: $background-white;
   border-radius: 20px;
-  padding: 10px;
-  margin-top: 15px;
+  padding: 1rem;
+  margin-top: 1rem;
   box-shadow: 3px 3px #eaeaea;
+  overflow: hidden;
+  &:hover .check__wrapper {
+    -webkit-animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+  &:hover .icon__circle--rotate {
+    animation: rotate__icon 0.8s both;
+  }
+}
+
+.check__wrapper {
+  width: 4rem;
+  margin: -1rem -5rem -1rem -1rem;
+  @include flex_center;
+  border-radius: 0 20px 20px 0;
+  background-color: $tertiary-color;
+  color: $background-white;
+}
+
+.icon__circle--rotate {
+  font-size: 30px;
+  margin-left: -15px;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50px);
+  }
+}
+
+@keyframes rotate__icon {
+  0% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.dish__info {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .dish__name {
@@ -433,11 +472,11 @@ h3 {
   margin: 0 0 5px 0;
 }
 
-.flex__caption__price {
+.dish__price {
+  padding-left: 0.5rem;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-right: 10px;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 
 .dish__caption {
@@ -449,5 +488,5 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 30px 30px 0 70px;
+  margin: 20px;
 }

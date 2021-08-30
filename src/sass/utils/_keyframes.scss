@@ -1,0 +1,30 @@
+// Loader Keyframe
+@keyframes loader--spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// Validation icon pop-up keyframe
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50px);
+  }
+}
+
+// Validation icon rotation keyframe
+@keyframes rotate__icon {
+  0% {
+    transition: rotate(180deg);
+  }
+
+  100% {
+    transition: rotate(-180deg);
+  }
+}
