@@ -419,11 +419,10 @@ h3 {
   box-shadow: 3px 3px #eaeaea;
   overflow: hidden;
   &:hover .check__wrapper {
-    -webkit-animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
   &:hover .icon__circle--rotate {
-    animation: rotate__icon 0.8s both;
+    animation: rotate__icon 0.8s ease-in-out both;
   }
 }
 
@@ -456,7 +455,7 @@ h3 {
   }
 
   100% {
-    transform: rotate(0deg);
+    transform: rotate(-360deg);
   }
 }
 
