@@ -1,10 +1,35 @@
 // Loader Keyframe
+@keyframes loader {
+  0% {
+    opacity: 1;
+    z-index: 10;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 @keyframes loader--spinner {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes logo {
+  0% {
+    transform: scale(1);
+  }
+
+  30% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }
 
