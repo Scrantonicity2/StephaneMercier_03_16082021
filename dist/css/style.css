@@ -186,14 +186,11 @@ footer {
   }
   100% {
     opacity: 0;
-    z-index: -10;
+    z-index: -1000;
   }
 }
 @keyframes loader--spinner {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }
@@ -210,7 +207,7 @@ footer {
 }
 @keyframes slide-left {
   100% {
-    transform: translateX(-60px);
+    transform: translateX(-4rem);
   }
 }
 @keyframes rotate__icon {
@@ -238,7 +235,7 @@ footer {
   }
   100% {
     opacity: 1;
-    transform: rotate(-360deg);
+    transform: rotate(-360deg) translateY(3px);
   }
 }
 .location__block {
@@ -366,10 +363,10 @@ footer {
   opacity: 1;
 }
 .heart__anim:hover .fade__out {
-  animation: fade-out 0.3s both;
+  animation: fade-out 0.4s both;
 }
 .heart__anim:hover .fill__in {
-  animation: fill-up 0.3s cubic-bezier(0, 0.3, 0.6, 1) both;
+  animation: fill-up 0.4s cubic-bezier(0, 0.3, 0.6, 1) both;
 }
 
 .fill__in {
@@ -504,14 +501,20 @@ h3 {
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 1px 1px 10px 1px #ccc;
+  text-overflow: ellipsis;
   overflow: hidden;
-  cursor: pointer;
+  white-space: nowrap;
   padding: 1em;
   margin: 1em 0;
 }
+.menu__card:hover .dish__price {
+  animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
 .menu__card:hover .check__wrapper {
   animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  transition: ease-out 0.5s;
 }
 .menu__card:hover .icon__circle--rotate {
   animation: rotate__icon 0.5s ease-in-out both;
@@ -519,7 +522,7 @@ h3 {
 
 .check__wrapper {
   width: 4rem;
-  margin: -1rem -5rem -1rem -1rem;
+  margin: -1rem -5rem -1rem 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -534,8 +537,8 @@ h3 {
 
 .dish__info {
   text-overflow: ellipsis;
-  white-space: nowrap;
   overflow: hidden;
+  white-space: nowrap;
   flex: 1;
 }
 
@@ -544,30 +547,32 @@ h3 {
   font-weight: bolder;
   margin: 0;
   text-overflow: ellipsis;
-  white-space: nowrap;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .dish__caption {
   font-size: 0.9rem;
   opacity: 0.6;
+  margin: 0;
   text-overflow: ellipsis;
-  white-space: nowrap;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .dish__price {
+  background-color: #fff;
   font-weight: bold;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  padding-left: 0.5em;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1em;
 }
 
 .order__btn {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   margin: 20px;
 }
 

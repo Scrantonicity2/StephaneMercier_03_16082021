@@ -7,15 +7,12 @@
 
   100% {
     opacity: 0;
-    z-index: -10;
+    z-index: -1000;
   }
 }
 
 @keyframes loader--spinner {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }
@@ -37,7 +34,7 @@
 // Validation icon pop-up keyframe
 @keyframes slide-left {
   100% {
-    transform: translateX(-60px);
+    transform: translateX(-4rem);
   }
 }
 
@@ -74,6 +71,6 @@
 
   100% {
     opacity: 1;
-    transform: rotate(-360deg);
+    transform: rotate(-360deg) translateY(3px);
   }
 }
