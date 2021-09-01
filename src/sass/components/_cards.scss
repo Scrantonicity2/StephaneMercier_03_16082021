@@ -55,30 +55,3 @@
   font-size: 1rem;
   margin: 0 10px 0 0;
 }
-
-// Restaurants' Pages cards for the menu
-.menu__card {
-  background-color: #fff;
-  border-radius: 20px;
-  padding: 10px;
-  margin-top: 15px;
-  box-shadow: 3px 3px #eaeaea;
-}
-
-.dish__name {
-  font-size: 0.85rem;
-  font-weight: bolder;
-  margin: 0 0 5px 0;
-}
-
-.flex__caption__price {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-right: 10px;
-}
-
-.dish__caption {
-  opacity: 0.6;
-  font-size: 0.8rem;
-}

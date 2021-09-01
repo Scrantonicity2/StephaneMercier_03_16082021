@@ -36,22 +36,19 @@
 
 // Validation icon pop-up keyframe
 @keyframes slide-left {
-  0% {
-    transform: translateX(0);
-  }
   100% {
-    transform: translateX(-50px);
+    transform: translateX(-60px);
   }
 }
 
 // Validation icon rotation keyframe
 @keyframes rotate__icon {
   0% {
-    transition: rotate(180deg);
+    transform: rotate(180deg);
   }
 
   100% {
-    transition: rotate(-180deg);
+    transform: rotate(-360deg);
   }
 }
 

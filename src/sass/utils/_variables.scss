@@ -1,7 +1,7 @@
 $primary-color: #9356dc;
 $secondary-color: #ff79da;
 $tertiary-color: #99e2d0;
-$btn-color: linear-gradient(165deg, #ff79da, #9356dc);
+$btn-color: linear-gradient(165deg, $secondary-color, $primary-color);
 $background-white: #fff;
 $background-grey: #eeeeee;
 $background-footer: #353535;
