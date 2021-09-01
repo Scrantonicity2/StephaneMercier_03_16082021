@@ -7,6 +7,7 @@
 
   100% {
     opacity: 0;
+    z-index: -10;
   }
 }
 
@@ -51,5 +52,31 @@
 
   100% {
     transition: rotate(-180deg);
+  }
+}
+
+// Heart fading when hovered keyframe
+@keyframes fade-out {
+  0% {
+    transform: scale(1);
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: scale(0);
+    opacity: 0;
+    transform: rotate(360deg);
+  }
+}
+
+//Heart filling up on hover keyframe
+@keyframes fill-up {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(-360deg);
   }
 }

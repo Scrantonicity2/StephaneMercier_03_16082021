@@ -17,90 +17,104 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-@keyframes loader {
-  0% {
-    opacity: 1;
-    z-index: 10;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes loader--spinner {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-@keyframes logo {
-  0% {
-    transform: scale(1);
-  }
-  30% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes slide-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50px);
-  }
-}
-@keyframes rotate__icon {
-  0% {
-    transition: rotate(180deg);
-  }
-  100% {
-    transition: rotate(-180deg);
-  }
-}
-.loader {
-  position: fixed;
+.card {
   width: 100%;
-  height: 100%;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: loader 2s both;
-  animation-delay: 1.5s;
-  animation-fill-mode: both;
+  background-color: #fff;
+  border-radius: 20px;
+  margin-bottom: 20px;
 }
 
-.loader--spinner {
+.restaurant__card__img {
+  background: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
   position: relative;
-  width: 250px;
-  height: 250px;
-  border: 5px solid #eeeeee;
-  border-radius: 250px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  background-size: cover;
+  border-radius: 20px 20px 0 0;
 }
-.loader--spinner ::after {
-  content: "";
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
-  border-radius: 250px;
-  border-top: 5px double #99e2d0;
-  border-left: 5px double #9356dc;
-  border-right: 5px double #ff79da;
-  border-bottom: 5px double black;
-  animation: loader--spinner 2s ease infinite;
+.restaurant__card__img--note {
+  background: url(/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+  position: relative;
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  background-size: cover;
+  border-radius: 20px 20px 0 0;
+}
+.restaurant__card__img--francaise {
+  background: url(/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+  position: relative;
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  background-size: cover;
+  border-radius: 20px 20px 0 0;
+}
+.restaurant__card__img--delice {
+  background: url(/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+  position: relative;
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  background-size: cover;
+  border-radius: 20px 20px 0 0;
 }
 
-.loader--logo img {
-  animation: logo 2.5s both;
+.img__caption {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.img__caption--box {
+  color: #3a8000;
+  padding: 5px;
+  margin: 10px;
+  background-color: #99e2d0;
+}
+
+.restaurant__card__info {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px 10px 10px;
+}
+
+.restaurant__card__name {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0 10px 0 0;
+}
+
+.menu__card {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: 15px;
+  box-shadow: 3px 3px #eaeaea;
+}
+
+.dish__name {
+  font-size: 0.85rem;
+  font-weight: bolder;
+  margin: 0 0 5px 0;
+}
+
+.flex__caption__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.dish__caption {
+  opacity: 0.6;
+  font-size: 0.8rem;
 }
 
 .logo__main {
@@ -145,6 +159,9 @@ footer {
 .footer__option {
   margin-bottom: 10px;
 }
+.footer__option:hover {
+  font-style: italic;
+}
 
 @keyframes loader {
   0% {
@@ -153,6 +170,7 @@ footer {
   }
   100% {
     opacity: 0;
+    z-index: -10;
   }
 }
 @keyframes loader--spinner {
@@ -188,6 +206,26 @@ footer {
   }
   100% {
     transition: rotate(-180deg);
+  }
+}
+@keyframes fade-out {
+  0% {
+    transform: scale(1);
+    transform: rotate(0);
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+    transform: rotate(360deg);
+  }
+}
+@keyframes fill-up {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(-360deg);
   }
 }
 .location__block {
@@ -308,77 +346,31 @@ footer {
   margin-bottom: 20px;
 }
 
-.restaurant__card__img {
+.heart__anim {
   position: relative;
-  background: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-  width: 100%;
-  height: 130px;
-  object-fit: cover;
-  background-size: cover;
-  border-radius: 20px 20px 0 0;
-}
-.restaurant__card__img--note {
-  position: relative;
-  background: url(/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
-  width: 100%;
-  height: 130px;
-  object-fit: cover;
-  background-size: cover;
-  border-radius: 20px 20px 0 0;
-}
-.restaurant__card__img--francaise {
-  position: relative;
-  background: url(/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
-  width: 100%;
-  height: 130px;
-  object-fit: cover;
-  background-size: cover;
-  border-radius: 20px 20px 0 0;
-}
-.restaurant__card__img--delice {
-  position: relative;
-  background: url(/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
-  width: 100%;
-  height: 130px;
-  object-fit: cover;
-  background-size: cover;
-  border-radius: 20px 20px 0 0;
-}
-
-.img__caption {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  position: absolute;
-  font-weight: 600;
-  font-size: 12px;
-}
-
-.img__caption--box {
-  color: #3a8000;
-  padding: 5px;
-  margin: 10px;
-  background-color: #99e2d0;
-}
-
-.restaurant__card__info {
-  display: flex;
-  flex-direction: column;
-  margin: 10px 0px 10px 10px;
-}
-
-.restaurant__card__name {
-  display: flex;
-  justify-content: space-between;
-  font-weight: 600;
-  font-size: 1rem;
-  margin: 0 10px 0 0;
-}
-
-.fa-heart {
   margin-top: 5px;
   font-size: 1.5rem;
-  opacity: 0.2;
+  opacity: 1;
+}
+.heart__anim:hover .fade__out {
+  animation: fade-out 0.3s both;
+}
+.heart__anim:hover .fill__in {
+  animation: fill-up 0.3s cubic-bezier(0, 0.3, 0.6, 1) both;
+}
+
+.fill__in {
+  background: -moz-linear-gradient(150deg, #ff79da, #9356dc);
+  background: -webkit-linear-gradient(150deg, #ff79da, #9356dc);
+  background: linear-gradient(150deg, #ff79da, #9356dc);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  right: 0px;
+  opacity: 0;
+  color: linear-gradient(165deg, #ff79da, #9356dc);
 }
 
 .restaurant__card__location {

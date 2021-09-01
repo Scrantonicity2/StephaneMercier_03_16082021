@@ -1,9 +1,59 @@
+@import "../utils/variables", "../utils/mixins";
+
 // Homepage's restaurants cards
 .card {
   width: 100%;
   background-color: #fff;
   border-radius: 20px;
   margin-bottom: 20px;
+}
+
+.restaurant__card__img {
+  background: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+  @include restaurant-card;
+
+  &--note {
+    background: url(/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+    @include restaurant-card;
+  }
+  &--francaise {
+    background: url(/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+    @include restaurant-card;
+  }
+  &--delice {
+    background: url(/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+    @include restaurant-card;
+  }
+}
+
+.img__caption {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.img__caption--box {
+  color: rgb(58, 128, 0);
+  padding: 5px;
+  margin: 10px;
+  background-color: $tertiary-color;
+}
+
+.restaurant__card__info {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px 10px 10px;
+}
+
+.restaurant__card__name {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0 10px 0 0;
 }
 
 // Restaurants' Pages cards for the menu
