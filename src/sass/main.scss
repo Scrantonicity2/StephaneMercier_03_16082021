@@ -44,6 +44,7 @@
 }
 
 .btn__radient {
+  cursor: pointer;
   width: 70%;
   height: 45px;
   padding: 10px;
@@ -196,7 +197,18 @@ footer {
 }
 
 .fa-arrow-left {
-  margin: 10px 50px 0 -40px;
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  &:hover {
+    background: -moz-linear-gradient(150deg, #ff79da, #9356dc);
+    background: -webkit-linear-gradient(150deg, #ff79da, #9356dc);
+    background: linear-gradient(150deg, #ff79da, #9356dc);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 .restaurant__main {
@@ -218,24 +230,24 @@ footer {
 .background__restaurant__img {
   background: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
   width: 100%;
-  height: 200px;
+  height: 14em;
   background-size: cover;
   &--note {
     background: url(/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
     width: 100%;
-    height: 175px;
+    height: 14em;
     background-size: cover;
   }
   &--francaise {
     background: url(/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
     width: 100%;
-    height: 200px;
+    height: 14em;
     background-size: cover;
   }
   &--delice {
     background: url(/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
     width: 100%;
-    height: 200px;
+    height: 14em;
     background-size: cover;
   }
 }
@@ -270,6 +282,7 @@ h3 {
   @include ellipsis;
   padding: 1em;
   margin: 1em 0;
+  animation: card-appear 2.5s cubic-bezier(0, 0.99, 1, 1) both;
   &:hover .dish__price {
     animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     @include ellipsis;
@@ -280,6 +293,42 @@ h3 {
   &:hover .icon__circle--rotate {
     animation: rotate__icon 0.5s ease-in-out both;
   }
+}
+
+.appear--one {
+  animation-delay: 0.2s;
+}
+
+.appear--two {
+  animation-delay: 0.4s;
+}
+
+.appear--three {
+  animation-delay: 0.6s;
+}
+
+.appear--four {
+  animation-delay: 0.8s;
+}
+
+.appear--five {
+  animation-delay: 1s;
+}
+
+.appear--six {
+  animation-delay: 1.2s;
+}
+
+.appear--seven {
+  animation-delay: 1.4s;
+}
+
+.appear--eight {
+  animation-delay: 1.6s;
+}
+
+.appear--nine {
+  animation-delay: 1.8s;
 }
 
 .check__wrapper {
@@ -339,8 +388,6 @@ h3 {
 // /.vscode
 // /.DS_Store
 
-// Regarder les boucles
+// Regarder les boucles pour les anims!!
 
 // https://brianthiely.github.io/BrianThiely_3_13062021 Projet 3 pour inspiration
-
-// https://codepen.io/GeorgeWL/pen/yLeGGMw  Animation du coeur

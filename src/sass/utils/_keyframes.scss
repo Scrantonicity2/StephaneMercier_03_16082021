@@ -31,6 +31,19 @@
   }
 }
 
+// Menu cards appearance keyframe
+@keyframes card-appear {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 // Validation icon pop-up keyframe
 @keyframes slide-left {
   100% {

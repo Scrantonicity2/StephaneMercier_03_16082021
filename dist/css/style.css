@@ -28,7 +28,7 @@ body {
   background: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
   position: relative;
   width: 100%;
-  height: 130px;
+  height: 10em;
   object-fit: cover;
   background-size: cover;
   border-radius: 20px 20px 0 0;
@@ -37,7 +37,7 @@ body {
   background: url(/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
   position: relative;
   width: 100%;
-  height: 130px;
+  height: 10em;
   object-fit: cover;
   background-size: cover;
   border-radius: 20px 20px 0 0;
@@ -46,7 +46,7 @@ body {
   background: url(/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
   position: relative;
   width: 100%;
-  height: 130px;
+  height: 10em;
   object-fit: cover;
   background-size: cover;
   border-radius: 20px 20px 0 0;
@@ -55,7 +55,7 @@ body {
   background: url(/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
   position: relative;
   width: 100%;
-  height: 130px;
+  height: 10em;
   object-fit: cover;
   background-size: cover;
   border-radius: 20px 20px 0 0;
@@ -95,13 +95,12 @@ body {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.9);
   display: flex;
   justify-content: center;
   align-items: center;
   animation: loader 2s both;
-  animation-delay: 1.5s;
-  animation-fill-mode: both;
+  animation-delay: 2s;
 }
 
 .loader--spinner {
@@ -126,7 +125,7 @@ body {
   border-left: 5px double #9356dc;
   border-right: 5px double #ff79da;
   border-bottom: 5px double black;
-  animation: loader--spinner 2s ease infinite;
+  animation: loader--spinner 1.5s ease infinite;
 }
 
 .loader--logo img {
@@ -205,6 +204,16 @@ footer {
     transform: scale(1);
   }
 }
+@keyframes card-appear {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 @keyframes slide-left {
   100% {
     transform: translateX(-4rem);
@@ -277,6 +286,7 @@ footer {
 }
 
 .btn__radient {
+  cursor: pointer;
   width: 70%;
   height: 45px;
   padding: 10px;
@@ -430,7 +440,18 @@ footer {
 }
 
 .fa-arrow-left {
-  margin: 10px 50px 0 -40px;
+  position: absolute;
+  top: 30px;
+  left: 20px;
+}
+.fa-arrow-left:hover {
+  background: -moz-linear-gradient(150deg, #ff79da, #9356dc);
+  background: -webkit-linear-gradient(150deg, #ff79da, #9356dc);
+  background: linear-gradient(150deg, #ff79da, #9356dc);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .restaurant__main {
@@ -452,25 +473,25 @@ footer {
 .background__restaurant__img {
   background: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
   width: 100%;
-  height: 200px;
+  height: 14em;
   background-size: cover;
 }
 .background__restaurant__img--note {
   background: url(/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
   width: 100%;
-  height: 175px;
+  height: 14em;
   background-size: cover;
 }
 .background__restaurant__img--francaise {
   background: url(/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
   width: 100%;
-  height: 200px;
+  height: 14em;
   background-size: cover;
 }
 .background__restaurant__img--delice {
   background: url(/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
   width: 100%;
-  height: 200px;
+  height: 14em;
   background-size: cover;
 }
 
@@ -506,6 +527,7 @@ h3 {
   white-space: nowrap;
   padding: 1em;
   margin: 1em 0;
+  animation: card-appear 2.5s cubic-bezier(0, 0.99, 1, 1) both;
 }
 .menu__card:hover .dish__price {
   animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
@@ -518,6 +540,42 @@ h3 {
 }
 .menu__card:hover .icon__circle--rotate {
   animation: rotate__icon 0.5s ease-in-out both;
+}
+
+.appear--one {
+  animation-delay: 0.2s;
+}
+
+.appear--two {
+  animation-delay: 0.4s;
+}
+
+.appear--three {
+  animation-delay: 0.6s;
+}
+
+.appear--four {
+  animation-delay: 0.8s;
+}
+
+.appear--five {
+  animation-delay: 1s;
+}
+
+.appear--six {
+  animation-delay: 1.2s;
+}
+
+.appear--seven {
+  animation-delay: 1.4s;
+}
+
+.appear--eight {
+  animation-delay: 1.6s;
+}
+
+.appear--nine {
+  animation-delay: 1.8s;
 }
 
 .check__wrapper {
