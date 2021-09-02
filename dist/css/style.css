@@ -13,6 +13,11 @@ a {
   color: inherit;
 }
 
+h3 {
+  font-size: 1.2rem;
+  opacity: 0.6;
+}
+
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -214,17 +219,12 @@ footer {
     transform: translateY(0);
   }
 }
-@keyframes slide-left {
-  100% {
-    transform: translateX(-4rem);
-  }
-}
 @keyframes rotate__icon {
   0% {
-    transform: rotate(180deg);
+    transform: rotate(180deg) scale(1);
   }
   100% {
-    transform: rotate(-360deg);
+    transform: rotate(-360deg) scale(1);
   }
 }
 @keyframes fade-out {
@@ -463,6 +463,12 @@ footer {
   padding: 30px 0;
 }
 
+.dish__block {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .restaurant__menu {
   background-color: #eeeeee;
   position: relative;
@@ -529,17 +535,38 @@ h3 {
   margin: 1em 0;
   animation: card-appear 2.5s cubic-bezier(0, 0.99, 1, 1) both;
 }
-.menu__card:hover .dish__price {
-  animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+.menu__card:hover .check__wrapper {
+  margin-right: -1rem;
+}
+.menu__card:hover .icon__circle--rotate {
+  animation: rotate__icon 0.5s ease both;
+}
+.menu__card .dish__info {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  flex: 1;
+}
+.menu__card .dish__name {
+  font-size: 1rem;
+  font-weight: bolder;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
-.menu__card:hover .check__wrapper {
-  animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+.menu__card .dish__caption {
+  font-size: 0.9rem;
+  opacity: 0.6;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
-.menu__card:hover .icon__circle--rotate {
-  animation: rotate__icon 0.5s ease-in-out both;
+.menu__card .dish__price {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 1em;
 }
 
 .appear--one {
@@ -584,54 +611,20 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 0 20px 20px 0;
   background-color: #99e2d0;
   color: #fff;
+  transition: ease-out 0.5s;
 }
 
 .icon__circle--rotate {
   font-size: 30px;
 }
 
-.dish__info {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  flex: 1;
-}
-
-.dish__name {
-  font-size: 1rem;
-  font-weight: bolder;
-  margin: 0;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.dish__caption {
-  font-size: 0.9rem;
-  opacity: 0.6;
-  margin: 0;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.dish__price {
-  background-color: #fff;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-left: 1em;
-}
-
 .order__btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 20px;
+  margin: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
