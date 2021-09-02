@@ -287,11 +287,7 @@ h3 {
   padding: 1em;
   margin: 1em 0;
   animation: card-appear 2.5s cubic-bezier(0, 0.99, 1, 1) both;
-  &:hover .dish__price {
-    // animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  }
   &:hover .check__wrapper {
-    // animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     margin-right: -1rem;
   }
   &:hover .icon__circle--rotate {
@@ -305,19 +301,18 @@ h3 {
   & .dish__name {
     font-size: 1rem;
     font-weight: bolder;
-    // margin: 0;
+    margin: 0;
     @include ellipsis;
   }
 
   & .dish__caption {
     font-size: 0.9rem;
     opacity: 0.6;
-    // margin: 0;
+    margin: 0;
     @include ellipsis;
   }
 
   & .dish__price {
-    // background-color: $background-white;
     font-weight: bold;
     @include flex-center;
     padding-left: 1em;

@@ -4,7 +4,8 @@
   "description": "Projet 3 du parcours Developpeur Web sur OpenClassRoom",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./src/sass/main.scss:./dist/css/style.css"
+    "sass": "sass --watch ./src/sass/main.scss:./dist/css/style.css",
+    "prefix": "postcss ./dist/css/style.css --use=autoprefixer --map=false --output=./dist/css/prefixed/"
   },
   "repository": {
     "type": "git",
@@ -16,6 +17,9 @@
   ],
   "author": "Mercier Stephane",
   "license": "ISC",
+  "browserslist": [
+    "last 5 versions"
+  ],
   "bugs": {
     "url": "https://github.com/Scrantonicity2/StephaneMercier_03_16082021/issues"
   },
