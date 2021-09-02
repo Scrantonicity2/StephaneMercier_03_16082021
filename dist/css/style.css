@@ -29,41 +29,14 @@ body {
   margin-bottom: 20px;
 }
 
-.restaurant__card__img {
-  background: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+.restaurant__card__img img {
   position: relative;
   width: 100%;
   height: 10em;
   object-fit: cover;
   background-size: cover;
   border-radius: 20px 20px 0 0;
-}
-.restaurant__card__img--note {
-  background: url(/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
   position: relative;
-  width: 100%;
-  height: 10em;
-  object-fit: cover;
-  background-size: cover;
-  border-radius: 20px 20px 0 0;
-}
-.restaurant__card__img--francaise {
-  background: url(/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
-  position: relative;
-  width: 100%;
-  height: 10em;
-  object-fit: cover;
-  background-size: cover;
-  border-radius: 20px 20px 0 0;
-}
-.restaurant__card__img--delice {
-  background: url(/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
-  position: relative;
-  width: 100%;
-  height: 10em;
-  object-fit: cover;
-  background-size: cover;
-  border-radius: 20px 20px 0 0;
 }
 
 .img__caption {
@@ -76,6 +49,9 @@ body {
 }
 
 .img__caption--box {
+  position: absolute;
+  top: -150px;
+  right: 40px;
   color: #3a8000;
   padding: 5px;
   margin: 10px;
@@ -468,7 +444,6 @@ footer {
   overflow: hidden;
   white-space: nowrap;
 }
-
 .restaurant__menu {
   background-color: #eeeeee;
   position: relative;
@@ -476,29 +451,25 @@ footer {
   top: -26px;
 }
 
-.background__restaurant__img {
-  background: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+.background__restaurant__img img {
   width: 100%;
-  height: 14em;
-  background-size: cover;
+  max-height: 14em;
+  object-fit: cover;
 }
-.background__restaurant__img--note {
-  background: url(/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+.background__restaurant__img img--note {
   width: 100%;
   height: 14em;
-  background-size: cover;
+  object-fit: cover;
 }
-.background__restaurant__img--francaise {
-  background: url(/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+.background__restaurant__img img--francaise {
   width: 100%;
   height: 14em;
-  background-size: cover;
+  object-fit: cover;
 }
-.background__restaurant__img--delice {
-  background: url(/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+.background__restaurant__img img--delice {
   width: 100%;
   height: 14em;
-  background-size: cover;
+  object-fit: cover;
 }
 
 .restaurant__menu__name {
@@ -569,6 +540,11 @@ h3 {
   align-items: center;
   justify-content: center;
   padding-left: 1em;
+}
+@media only screen and (min-width: 576px) and (max-width: 1024px) {
+  .menu__card {
+    width: 30%;
+  }
 }
 
 .appear--one {
