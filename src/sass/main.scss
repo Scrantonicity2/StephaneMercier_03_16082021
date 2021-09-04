@@ -57,6 +57,12 @@
   &:hover {
     filter: brightness(110%);
   }
+  @media only screen and (min-width: 576px) and (max-width: 1024px) {
+    font-size: 1.2rem;
+  }
+  @media only screen and (min-width: 1025px) {
+    font-size: 1.5rem;
+  }
 }
 
 .container {
@@ -171,6 +177,14 @@ footer {
   color: $background-white;
   display: flex;
   flex-direction: column;
+  @media only screen and (min-width: 576px) and (max-width: 1024px) {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  @media only screen and (min-width: 1025px) {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 }
 
 .footer__icon {
@@ -198,8 +212,9 @@ footer {
 }
 
 .fa-arrow-left {
+  font-size: 1.5rem;
   position: absolute;
-  top: 30px;
+  top: 20px;
   left: 20px;
   &:hover {
     background: -moz-linear-gradient(150deg, #ff79da, #9356dc);
@@ -219,12 +234,20 @@ footer {
 .container__restaurant {
   margin: 0 10px;
   padding: 30px 0;
+  @media only screen and (min-width: 576px) and (max-width: 1024px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+  }
+  @media only screen and (min-width: 1025px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+  }
 }
 
 .dish__block {
   @include ellipsis;
-  @media only screen and (min-width: 576px) and (max-width: 1024px) {
-  }
 }
 
 .restaurant__menu {
@@ -264,6 +287,12 @@ footer {
   margin-bottom: -20px;
   padding: 15px 18px 0 15px;
   border-radius: 20px 20x 0 0;
+  @media only screen and (min-width: 576px) and (max-width: 1024px) {
+    justify-content: space-evenly;
+  }
+  @media only screen and (min-width: 1025px) {
+    justify-content: space-evenly;
+  }
 }
 
 h3 {
@@ -316,9 +345,6 @@ h3 {
     @include flex-center;
     padding-left: 1em;
   }
-  @media only screen and (min-width: 576px) and (max-width: 1024px) {
-    width: 30%;
-  }
 }
 
 .appear--one {
@@ -370,35 +396,15 @@ h3 {
   font-size: 30px;
 }
 
-// .dish__info {
-//   @include ellipsis;
-//   flex: 1;
-// }
-
-// .dish__name {
-//   font-size: 1rem;
-//   font-weight: bolder;
-//   // margin: 0;
-//   @include ellipsis;
-// }
-
-// .dish__caption {
-//   font-size: 0.9rem;
-//   opacity: 0.6;
-//   // margin: 0;
-//   @include ellipsis;
-// }
-
-// .dish__price {
-//   // background-color: $background-white;
-//   font-weight: bold;
-//   @include flex-center;
-//   padding-left: 1em;
-// }
-
 .order__btn {
   @include flex-center;
   margin: 2rem;
+  @media only screen and (min-width: 576px) and (max-width: 1024px) {
+    padding: 0 15rem;
+  }
+  @media only screen and (min-width: 1025px) {
+    padding: 0 25rem;
+  }
 }
 
 // faire un .gitignore pour "NODE MODULES" et ".DS STORE"

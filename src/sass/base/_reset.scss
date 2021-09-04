@@ -1,7 +1,10 @@
+@import "../utils/variables";
+
 body {
   font-family: "Roboto", sans-serif;
   margin: 0px;
   padding: 0px;
+  background-color: $background-grey;
 }
 
 * {

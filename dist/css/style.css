@@ -2,6 +2,7 @@ body {
   font-family: "Roboto", sans-serif;
   margin: 0px;
   padding: 0px;
+  background-color: #eeeeee;
 }
 
 * {
@@ -275,6 +276,16 @@ footer {
 .btn__radient:hover {
   filter: brightness(110%);
 }
+@media only screen and (min-width: 576px) and (max-width: 1024px) {
+  .btn__radient {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .btn__radient {
+    font-size: 1.5rem;
+  }
+}
 
 .container {
   margin: 0 20px;
@@ -389,6 +400,18 @@ footer {
   display: flex;
   flex-direction: column;
 }
+@media only screen and (min-width: 576px) and (max-width: 1024px) {
+  .footer__menu {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .footer__menu {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
 
 .footer__icon {
   margin-right: 10px;
@@ -416,8 +439,9 @@ footer {
 }
 
 .fa-arrow-left {
+  font-size: 1.5rem;
   position: absolute;
-  top: 30px;
+  top: 20px;
   left: 20px;
 }
 .fa-arrow-left:hover {
@@ -438,12 +462,27 @@ footer {
   margin: 0 10px;
   padding: 30px 0;
 }
+@media only screen and (min-width: 576px) and (max-width: 1024px) {
+  .container__restaurant {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .container__restaurant {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+  }
+}
 
 .dish__block {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
+
 .restaurant__menu {
   background-color: #eeeeee;
   position: relative;
@@ -481,6 +520,16 @@ footer {
   margin-bottom: -20px;
   padding: 15px 18px 0 15px;
   border-radius: 20px 20x 0 0;
+}
+@media only screen and (min-width: 576px) and (max-width: 1024px) {
+  .restaurant__menu__name {
+    justify-content: space-evenly;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .restaurant__menu__name {
+    justify-content: space-evenly;
+  }
 }
 
 h3 {
@@ -541,11 +590,6 @@ h3 {
   justify-content: center;
   padding-left: 1em;
 }
-@media only screen and (min-width: 576px) and (max-width: 1024px) {
-  .menu__card {
-    width: 30%;
-  }
-}
 
 .appear--one {
   animation-delay: 0.2s;
@@ -603,6 +647,16 @@ h3 {
   align-items: center;
   justify-content: center;
   margin: 2rem;
+}
+@media only screen and (min-width: 576px) and (max-width: 1024px) {
+  .order__btn {
+    padding: 0 15rem;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .order__btn {
+    padding: 0 25rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
