@@ -28,6 +28,21 @@
   font-weight: 500;
 }
 
+.reservation__howTo__block {
+  @media only screen and (min-width: 576px) and (max-width: 1024px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: $background-white;
+    padding: 10px;
+  }
+
+  @media only screen and (min-width: 1025px) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
 .nav__menu {
   background: linear-gradient($background-white, $background-grey);
   padding: 20px 20px 50px 20px;
@@ -35,6 +50,14 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  @media only screen and (min-width: 576px) and (max-width: 1024px) {
+    width: 50%;
+    border: 4px solid $btn-color;
+    order: 2;
+  }
+
+  @media only screen and (min-width: 1025px) {
+  }
 }
 
 .nav__menu__title__sub {
@@ -46,7 +69,7 @@
 
 .btn__radient {
   cursor: pointer;
-  width: 70%;
+  width: 65%;
   height: 45px;
   padding: 10px;
   border-radius: 20px;
@@ -65,18 +88,38 @@
   }
 }
 
-.container {
-  margin: 0 20px;
-  padding: 30px 0;
+.contain__cards {
+  margin: 0 10px;
+  padding: 30px 0px;
+}
+
+.contain__howTo__block {
+  padding: 20px;
+  background: $background-white;
+}
+
+.howTo__block {
+  @media only screen and (min-width: 576px) and (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  @media only screen and (min-width: 1025px) {
+  }
 }
 
 .functionning__menu__list {
-  width: 100%;
+  // width: 100%;
   margin-left: 10px;
+  @media only screen and (min-width: 576px) and (max-width: 1024px) {
+  }
+
+  @media only screen and (min-width: 1025px) {
+  }
 }
 
 .functionning__menu__btn__main {
-  margin-bottom: 15px;
+  margin: 0 10px 15px 0px;
   :hover {
     background: #e4d5f6;
   }
@@ -116,20 +159,9 @@
   margin: 0 20px 0 -5px;
 }
 
-.restaurants__gray__bg {
-  background: $background-grey;
-}
-
-.restaurants__cards__list {
-  margin-bottom: 20px;
-}
-
-.card {
-  width: 100%;
-  background-color: $background-white;
-  border-radius: 20px;
-  margin-bottom: 20px;
-}
+// .restaurants__cards__list {
+//   margin-bottom: 20px;
+// }
 
 .heart__anim {
   position: relative;
@@ -258,23 +290,15 @@ footer {
 }
 
 .background__restaurant__img img {
-  width: 100%;
-  max-height: 14em;
-  object-fit: cover;
+  @include bG__image;
   &--note {
-    width: 100%;
-    height: 14em;
-    object-fit: cover;
+    @include bG__image;
   }
   &--francaise {
-    width: 100%;
-    height: 14em;
-    object-fit: cover;
+    @include bG__image;
   }
   &--delice {
-    width: 100%;
-    height: 14em;
-    object-fit: cover;
+    @include bG__image;
   }
 }
 
@@ -286,7 +310,7 @@ footer {
   font-size: 16px;
   margin-bottom: -20px;
   padding: 15px 18px 0 15px;
-  border-radius: 20px 20x 0 0;
+  border-radius: 20px 20px 0 0;
   @media only screen and (min-width: 576px) and (max-width: 1024px) {
     justify-content: space-evenly;
   }

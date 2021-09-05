@@ -3,13 +3,12 @@
 // Homepage's restaurants cards
 .card {
   width: 100%;
-  background-color: #fff;
+  background-color: $background-white;
   border-radius: 20px;
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
 .restaurant__card__img img {
-  // background: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
   @include restaurant-card;
   position: relative;
 }
@@ -29,7 +28,6 @@
   right: 40px;
   color: rgb(58, 128, 0);
   padding: 5px;
-  margin: 10px;
   background-color: $tertiary-color;
 }
 

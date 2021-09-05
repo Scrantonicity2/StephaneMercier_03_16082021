@@ -9,12 +9,13 @@
       src="https://kit.fontawesome.com/032f209c78.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="dist/css/style.css" />
+    <link rel="stylesheet" href=".dist/css/style.css" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
+      type="text/css"
     />
   </head>
 
@@ -46,47 +47,51 @@
           <span class="location__block__text__spec">Paris, Belleville</span>
         </div>
       </section>
-      <!-- Reservation Menu and Button leading to Restaurants Section -->
-      <section class="nav__menu">
-        <h1 class="nav__menu__title">Réservez le menu qui vous convient</h1>
-        <p class="nav__menu__title__sub">
-          Découvrez des restaurants d'exception, séléctionnés par nos soins.
-        </p>
-        <!-- Explore Button -->
-        <button class="btn__radient">
-          <a href="#anchor__restaurants__list">Explorer nos restaurants</a>
-        </button>
-      </section>
-      <section class="container">
-        <!-- "How to" section -->
-        <h1 class="functionning__menu__title">Fonctionnement</h1>
-        <div class="functionning__menu__list">
-          <div class="functionning__menu__btn__main">
-            <div class="functionning__menu__btn">
-              <div class="btn__number">1</div>
-              <span class="fas fa-mobile-alt btn__icon"></span>
-              <div class="btn__text">Choisissez un restaurant</div>
+      <div class="reservation__howTo__block">
+        <!-- Reservation Menu and Button leading to Restaurants Section -->
+        <section class="nav__menu">
+          <h1 class="nav__menu__title">Réservez le menu qui vous convient</h1>
+          <p class="nav__menu__title__sub">
+            Découvrez des restaurants d'exception, séléctionnés par nos soins.
+          </p>
+          <!-- Explore Button -->
+          <button class="btn__radient">
+            <a href="#anchor__restaurants__list">Explorer nos restaurants</a>
+          </button>
+        </section>
+        <section class="contain__howTo__block">
+          <div class="howTo__block">
+            <!-- "How to" section -->
+            <h1 class="functionning__menu__title">Fonctionnement</h1>
+            <div class="functionning__menu__list">
+              <div class="functionning__menu__btn__main">
+                <div class="functionning__menu__btn">
+                  <div class="btn__number">1</div>
+                  <span class="fas fa-mobile-alt btn__icon"></span>
+                  <div class="btn__text">Choisissez un restaurant</div>
+                </div>
+              </div>
+              <div class="functionning__menu__btn__main">
+                <div class="functionning__menu__btn">
+                  <div class="btn__number">2</div>
+                  <span class="fas fa-list-ul btn__icon"></span>
+                  <div class="btn__text">Composez votre menu</div>
+                </div>
+              </div>
+              <div class="functionning__menu__btn__main">
+                <div class="functionning__menu__btn">
+                  <div class="btn__number">3</div>
+                  <span class="fas fa-store btn__icon"></span>
+                  <div class="btn__text">Dégustez au restaurant</div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="functionning__menu__btn__main">
-            <div class="functionning__menu__btn">
-              <div class="btn__number">2</div>
-              <span class="fas fa-list-ul btn__icon"></span>
-              <div class="btn__text">Composez votre menu</div>
-            </div>
-          </div>
-          <div class="functionning__menu__btn__main">
-            <div class="functionning__menu__btn">
-              <div class="btn__number">3</div>
-              <span class="fas fa-store btn__icon"></span>
-              <div class="btn__text">Dégustez au restaurant</div>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
       <!-- Restaurants Section with links to Restaurant page -->
-      <section id="anchor__restaurants__list" class="restaurants__gray__bg">
-        <div class="container">
+      <section id="anchor__restaurants__list">
+        <div class="contain__cards">
           <h1>Restaurants</h1>
           <div class="restaurants__cards__list">
             <article class="restaurant__cards__list card">
@@ -186,26 +191,24 @@
   </body>
   <!-- Footer dark Bg and white color font -->
   <footer>
-    <div class="container">
-      <section class="footer__menu">
-        <div class="logo__footer">
-          <img
-            class="logo__footer--white"
-            src="images/logo/ohmyfood@2x.svg"
-            alt="logo Ohmyfood"
-          />
-        </div>
-        <a href="#" class="footer__option">
-          <span class="fas fa-utensils footer__icon"></span
-          ><span class="icon__text">Proposer un restaurant</span>
-        </a>
-        <a href="#" class="footer__option">
-          <span class="fas fa-handshake footer__icon"></span
-          ><span>Devenir partenaire</span>
-        </a>
-        <a href="#" class="footer__option">Mentions légales</a>
-        <a href="#" class="footer__option">Contact</a>
-      </section>
-    </div>
+    <section class="footer__menu">
+      <div class="logo__footer">
+        <img
+          class="logo__footer--white"
+          src="images/logo/ohmyfood@2x.svg"
+          alt="logo Ohmyfood"
+        />
+      </div>
+      <a href="#" class="footer__option">
+        <span class="fas fa-utensils footer__icon"></span
+        ><span class="icon__text">Proposer un restaurant</span>
+      </a>
+      <a href="#" class="footer__option">
+        <span class="fas fa-handshake footer__icon"></span
+        ><span>Devenir partenaire</span>
+      </a>
+      <a href="#" class="footer__option">Mentions légales</a>
+      <a href="#" class="footer__option">Contact</a>
+    </section>
   </footer>
 </html>

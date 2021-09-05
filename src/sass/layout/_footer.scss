@@ -1,17 +1,12 @@
 footer {
   background: #353535;
+  padding: 25px 10px;
 }
 
 .logo__footer--white {
   width: 8rem;
   margin-bottom: 20px;
   filter: invert(1);
-}
-
-.footer__menu {
-  color: white;
-  display: flex;
-  flex-direction: column;
 }
 
 .footer__icon {
@@ -26,5 +21,37 @@ footer {
   margin-bottom: 10px;
   &:hover {
     font-style: italic;
+  }
+}
+
+.fa-handshake {
+  transform: rotate(-45deg);
+}
+
+.footer__menu {
+  color: $background-white;
+  display: flex;
+  flex-direction: column;
+  @media only screen and (min-width: 576px) and (max-width: 1024px) {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  @media only screen and (min-width: 1025px) {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+.footer__menu {
+  color: $background-white;
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (min-width: 576px) and (max-width: 1024px) {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  @media only screen and (min-width: 1025px) {
+    flex-direction: row;
+    justify-content: space-evenly;
   }
 }
