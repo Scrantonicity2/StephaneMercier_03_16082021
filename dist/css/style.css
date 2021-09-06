@@ -317,7 +317,7 @@ footer {
   }
   100% {
     opacity: 1;
-    transform: rotate(-360deg) translateY(3px);
+    transform: rotate(360deg) translateY(2px);
   }
 }
 .location__block {
@@ -631,7 +631,7 @@ footer {
 .fa-arrow-left {
   font-size: 1.5rem;
   position: absolute;
-  top: 20px;
+  top: 30px;
   left: 20px;
 }
 .fa-arrow-left:hover {
