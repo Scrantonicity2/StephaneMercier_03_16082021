@@ -20,28 +20,41 @@
   position: relative;
 }
 
-// .img__caption {
-//   width: 100%;
-//   display: flex;
-//   justify-content: flex-end;
-//   position: absolute;
-//   font-weight: 600;
-//   font-size: 12px;
-// }
+.img__caption {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  font-weight: 600;
+  font-size: 12px;
+  @media only screen and (min-width: 576px) and (max-width: 1023px) {
+    width: auto;
+  }
+  @media only screen and (min-width: 1024px) {
+    width: auto;
+  }
+}
 
-// .img__caption--box {
-//   position: absolute;
-//   top: -150px;
-//   right: 40px;
-//   color: rgb(58, 128, 0);
-//   padding: 5px;
-//   background-color: $tertiary-color;
-//   @media only screen and (min-width: 576px) and (max-width: 1024px) {
-//   }
+.img__caption--box {
+  position: absolute;
+  top: -150px;
+  right: 40px;
+  color: rgb(58, 128, 0);
+  padding: 5px;
+  background-color: $tertiary-color;
+  @media only screen and (min-width: 576px) and (max-width: 1023px) {
+    right: -280px;
+  }
 
-//   @media only screen and (min-width: 1025px) {
-//   }
-// }
+  @media only screen and (min-width: 1024px) {
+    right: -380px;
+  }
+
+  @media only screen and (min-width: 1044px) {
+    right: -540px;
+  }
+}
 
 .restaurant__card__info {
   display: flex;
@@ -55,4 +68,20 @@
   font-weight: 600;
   font-size: 1rem;
   margin: 0 10px 0 0;
+  @media only screen and (min-width: 576px) and (max-width: 1024px) {
+    font-size: 1.5rem;
+  }
+  @media only screen and (min-width: 1025px) {
+    font-size: 1.5rem;
+  }
+}
+
+.restaurant__card__location {
+  @media only screen and (min-width: 576px) and (max-width: 1024px) {
+    font-size: 1.2rem;
+  }
+
+  @media only screen and (min-width: 1025px) {
+    font-size: 1.2rem;
+  }
 }
