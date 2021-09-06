@@ -6,6 +6,13 @@
   background-color: $background-white;
   border-radius: 20px;
   margin: 20px 0;
+  @media only screen and (min-width: 576px) and (max-width: 1024px) {
+    width: 40%;
+  }
+
+  @media only screen and (min-width: 1025px) {
+    width: 40%;
+  }
 }
 
 .restaurant__card__img img {
@@ -13,23 +20,28 @@
   position: relative;
 }
 
-.img__caption {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  position: absolute;
-  font-weight: 600;
-  font-size: 12px;
-}
+// .img__caption {
+//   width: 100%;
+//   display: flex;
+//   justify-content: flex-end;
+//   position: absolute;
+//   font-weight: 600;
+//   font-size: 12px;
+// }
 
-.img__caption--box {
-  position: absolute;
-  top: -150px;
-  right: 40px;
-  color: rgb(58, 128, 0);
-  padding: 5px;
-  background-color: $tertiary-color;
-}
+// .img__caption--box {
+//   position: absolute;
+//   top: -150px;
+//   right: 40px;
+//   color: rgb(58, 128, 0);
+//   padding: 5px;
+//   background-color: $tertiary-color;
+//   @media only screen and (min-width: 576px) and (max-width: 1024px) {
+//   }
+
+//   @media only screen and (min-width: 1025px) {
+//   }
+// }
 
 .restaurant__card__info {
   display: flex;

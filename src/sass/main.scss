@@ -1,5 +1,5 @@
 @import "./base/reset", "./base/typography";
-@import "./components/cards", "./components/loader";
+@import "./components/cards";
 @import "./layout/header", "./layout/footer";
 @import "./utils/mixins";
 @import "./utils/variables";
@@ -13,6 +13,9 @@
   margin-top: 3px;
   padding: 10px 0;
   opacity: 0.7;
+  @media only screen and (min-width: 1025px) {
+    padding: 20px 0;
+  }
 }
 
 .marker__icon {
@@ -32,19 +35,19 @@
   @media only screen and (min-width: 576px) and (max-width: 1024px) {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: $background-white;
-    padding: 10px;
   }
 
   @media only screen and (min-width: 1025px) {
+    width: 100%;
     display: flex;
-    flex-direction: row;
+    justify-content: space-evenly;
   }
 }
 
 .nav__menu {
-  background: linear-gradient($background-white, $background-grey);
+  background-color: $background-grey;
   padding: 20px 20px 50px 20px;
   display: flex;
   flex-direction: column;
@@ -52,11 +55,17 @@
   text-align: center;
   @media only screen and (min-width: 576px) and (max-width: 1024px) {
     width: 50%;
-    border: 4px solid $btn-color;
     order: 2;
   }
-
   @media only screen and (min-width: 1025px) {
+    width: 50%;
+    order: 2;
+  }
+}
+
+.nav__menu__title {
+  @media only screen and (min-width: 1025px) {
+    font-size: 2rem;
   }
 }
 
@@ -65,13 +74,16 @@
   opacity: 0.5;
   font-size: 1rem;
   padding-bottom: 20px;
+  @media only screen and (min-width: 1025px) {
+    font-size: 1.5rem;
+  }
 }
 
 .btn__radient {
   cursor: pointer;
   width: 65%;
   height: 45px;
-  padding: 10px;
+  // padding: 10px;
   border-radius: 20px;
   border: none;
   box-shadow: 2px 2px 5px lightslategrey;
@@ -82,20 +94,25 @@
   }
   @media only screen and (min-width: 576px) and (max-width: 1024px) {
     font-size: 1.2rem;
+    margin-top: 20px;
+    width: 70%;
   }
   @media only screen and (min-width: 1025px) {
     font-size: 1.5rem;
+    height: 60px;
+    margin-top: 20px;
   }
-}
-
-.contain__cards {
-  margin: 0 10px;
-  padding: 30px 0px;
 }
 
 .contain__howTo__block {
   padding: 20px;
   background: $background-white;
+  @media only screen and (min-width: 576px) and (max-width: 1024px) {
+    width: 50%;
+  }
+  @media only screen and (min-width: 1025px) {
+    width: 50%;
+  }
 }
 
 .howTo__block {
@@ -105,11 +122,13 @@
     align-items: center;
   }
   @media only screen and (min-width: 1025px) {
+    display: flex;
+    flex-direction: column;
+    margin: 0 90px;
   }
 }
 
 .functionning__menu__list {
-  // width: 100%;
   margin-left: 10px;
   @media only screen and (min-width: 576px) and (max-width: 1024px) {
   }
@@ -119,13 +138,15 @@
 }
 
 .functionning__menu__btn__main {
-  margin: 0 10px 15px 0px;
+  margin-bottom: 10px;
   :hover {
     background: #e4d5f6;
   }
   :hover .btn__icon {
     color: $primary-color;
     opacity: 1;
+  }
+  @media only screen and (min-width: 1025px) {
   }
 }
 
@@ -159,9 +180,34 @@
   margin: 0 20px 0 -5px;
 }
 
-// .restaurants__cards__list {
-//   margin-bottom: 20px;
-// }
+.container {
+  margin: 0 10px;
+  padding: 30px 0px;
+}
+
+h1 {
+  @media only screen and (min-width: 576px) and (max-width: 1024px) {
+    @include flex-center;
+  }
+
+  @media only screen and (min-width: 1025px) {
+    @include flex-center;
+  }
+}
+
+.display__card {
+  @media only screen and (min-width: 576px) and (max-width: 1024px) {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  @media only screen and (min-width: 1025px) {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+}
 
 .heart__anim {
   position: relative;
@@ -338,7 +384,7 @@ h3 {
   @include ellipsis;
   padding: 1em;
   margin: 1em 0;
-  animation: card-appear 2.5s cubic-bezier(0, 0.99, 1, 1) both;
+  animation: card-appear 2s cubic-bezier(1, 0.01, 0, 0.99) both;
   &:hover .check__wrapper {
     margin-right: -1rem;
   }
@@ -369,6 +415,10 @@ h3 {
     @include flex-center;
     padding-left: 1em;
   }
+}
+
+.appear--zero {
+  animation-delay: 0s;
 }
 
 .appear--one {
