@@ -1,4 +1,5 @@
-@import "../utils/variables";
+@import "../utils/variables", "../utils/mixins";
+
 html {
   scroll-behavior: smooth;
 }
@@ -22,4 +23,19 @@ a {
 h3 {
   font-size: 1.2rem;
   opacity: 0.6;
+}
+
+h1 {
+  @media only screen and (min-width: 576px) and (max-width: 1024px) {
+    @include flex-center;
+  }
+
+  @media only screen and (min-width: 1025px) {
+    @include flex-center;
+  }
+}
+
+footer {
+  background: $background-footer;
+  padding: 25px 10px;
 }
