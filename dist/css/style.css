@@ -278,8 +278,7 @@ body {
 .menu__card .dish__price {
   font-weight: bold;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
   padding-left: 1em;
 }
 
@@ -365,6 +364,7 @@ body {
 }
 
 .btn__radient {
+  font-size: 0.8rem;
   cursor: pointer;
   width: 65%;
   height: 45px;

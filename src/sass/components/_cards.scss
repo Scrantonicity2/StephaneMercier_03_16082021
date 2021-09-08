@@ -124,7 +124,8 @@
 
   & .dish__price {
     font-weight: bold;
-    @include flex-center;
+    display: flex;
+    align-items: flex-end;
     padding-left: 1em;
   }
 }
