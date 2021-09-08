@@ -1,6 +1,20 @@
-@import "../utils/variables", "../utils/mixins";
+@import "../utils/variables", "../utils/mixins", "../utils/keyframes";
 
 // Homepage's restaurants cards
+.display__card {
+  @media only screen and (min-width: 576px) and (max-width: 1024px) {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  @media only screen and (min-width: 1025px) {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+}
+
 .card {
   width: 100%;
   background-color: $background-white;
@@ -20,41 +34,24 @@
   position: relative;
 }
 
-.img__caption {
-  position: absolute;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  font-weight: 600;
-  font-size: 12px;
-  @media only screen and (min-width: 576px) and (max-width: 1023px) {
-    width: auto;
-  }
-  @media only screen and (min-width: 1024px) {
-    width: auto;
-  }
-}
+// .img__caption {
+//   position: absolute;
+//   width: 100%;
+//   display: flex;
+//   justify-content: center;
+//   position: absolute;
+//   font-weight: 600;
+//   font-size: 12px;
+// }
 
-.img__caption--box {
-  position: absolute;
-  top: -150px;
-  right: 40px;
-  color: rgb(58, 128, 0);
-  padding: 5px;
-  background-color: $tertiary-color;
-  @media only screen and (min-width: 576px) and (max-width: 1023px) {
-    right: -280px;
-  }
-
-  @media only screen and (min-width: 1024px) {
-    right: -380px;
-  }
-
-  @media only screen and (min-width: 1044px) {
-    right: -540px;
-  }
-}
+// .img__caption--box {
+//   position: absolute;
+//   top: -150px;
+//   right: 40px;
+//   color: rgb(58, 128, 0);
+//   padding: 5px;
+//   background-color: $tertiary-color;
+// }
 
 .restaurant__card__info {
   display: flex;
@@ -69,19 +66,102 @@
   font-size: 1rem;
   margin: 0 10px 0 0;
   @media only screen and (min-width: 576px) and (max-width: 1024px) {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   @media only screen and (min-width: 1025px) {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 }
 
 .restaurant__card__location {
+  opacity: 0.6;
+  margin: -5px 0 10px 0;
   @media only screen and (min-width: 576px) and (max-width: 1024px) {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   @media only screen and (min-width: 1025px) {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
+}
+
+.menu__card {
+  display: flex;
+  background-color: $background-white;
+  border-radius: 20px;
+  box-shadow: 1px 1px 10px 1px #ccc;
+  @include ellipsis;
+  padding: 1em;
+  margin: 1em 0;
+  animation: card-appear 2s cubic-bezier(1, 0.01, 0, 0.99) both;
+  &:hover .check__wrapper {
+    margin-right: -1rem;
+  }
+  &:hover .icon__circle--rotate {
+    animation: rotate__icon 0.5s ease both;
+  }
+  & .dish__info {
+    @include ellipsis;
+    flex: 1;
+  }
+
+  & .dish__name {
+    font-size: 1rem;
+    font-weight: bolder;
+    margin: 0;
+    @include ellipsis;
+  }
+
+  & .dish__caption {
+    font-size: 0.9rem;
+    opacity: 0.6;
+    margin: 0;
+    @include ellipsis;
+  }
+
+  & .dish__price {
+    font-weight: bold;
+    @include flex-center;
+    padding-left: 1em;
+  }
+}
+
+.appear--zero {
+  animation-delay: 0s;
+}
+
+.appear--one {
+  animation-delay: 0.2s;
+}
+
+.appear--two {
+  animation-delay: 0.4s;
+}
+
+.appear--three {
+  animation-delay: 0.6s;
+}
+
+.appear--four {
+  animation-delay: 0.8s;
+}
+
+.appear--five {
+  animation-delay: 1s;
+}
+
+.appear--six {
+  animation-delay: 1.2s;
+}
+
+.appear--seven {
+  animation-delay: 1.4s;
+}
+
+.appear--eight {
+  animation-delay: 1.6s;
+}
+
+.appear--nine {
+  animation-delay: 1.8s;
 }
