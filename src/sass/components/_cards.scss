@@ -109,16 +109,17 @@
   }
 
   & .dish__name {
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: bolder;
-    margin: 0;
+    margin: 0px;
     @include ellipsis;
   }
 
   & .dish__caption {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     opacity: 0.6;
     margin: 0;
+    padding-top: 5px;
     @include ellipsis;
   }
 

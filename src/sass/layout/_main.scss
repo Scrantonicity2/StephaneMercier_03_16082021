@@ -1,4 +1,4 @@
-@import "../utils/variables", "../utils/mixins";
+@import "../utils/variables", "../utils/mixins", "../utils/maps";
 
 .location__block {
   display: flex;
@@ -58,8 +58,12 @@
 }
 
 .nav__menu__title {
+  font-size: 1.1rem;
+  @media only screen and (min-width: 576px) and (max-width: 1024px) {
+    font-size: 1.3rem;
+  }
   @media only screen and (min-width: 1025px) {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -71,9 +75,8 @@
   @media only screen and (min-width: 576px) and (max-width: 1024px) {
     font-size: 1.2rem;
   }
-
   @media only screen and (min-width: 1025px) {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -185,6 +188,7 @@
 
 .dish__block {
   @include ellipsis;
+  margin: 10px;
 }
 
 .restaurant__menu {
