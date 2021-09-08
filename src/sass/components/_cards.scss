@@ -113,6 +113,13 @@
     font-weight: bolder;
     margin: 0px;
     @include ellipsis;
+    @media only screen and (min-width: 576px) and (max-width: 1024px) {
+      font-size: 0.9rem;
+    }
+
+    @media only screen and (min-width: 1025px) {
+      font-size: 1.1rem;
+    }
   }
 
   & .dish__caption {
@@ -121,6 +128,13 @@
     margin: 0;
     padding-top: 5px;
     @include ellipsis;
+    @media only screen and (min-width: 576px) and (max-width: 1024px) {
+      font-size: 0.8rem;
+    }
+
+    @media only screen and (min-width: 1025px) {
+      font-size: 0.9rem;
+    }
   }
 
   & .dish__price {
