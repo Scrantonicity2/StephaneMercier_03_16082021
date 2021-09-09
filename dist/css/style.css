@@ -144,7 +144,7 @@ body {
 }
 
 .restaurant__card__img {
-  background: url(./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+  background: url(../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
   display: flex;
   justify-content: flex-end;
   background-position: center;
@@ -154,7 +154,7 @@ body {
   border-radius: 20px 20px 0 0;
 }
 .restaurant__card__img--note {
-  background: url(./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+  background: url(../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
   display: flex;
   justify-content: flex-end;
   background-position: center;
@@ -164,7 +164,7 @@ body {
   border-radius: 20px 20px 0 0;
 }
 .restaurant__card__img--francaise {
-  background: url(./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+  background: url(../../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
   display: flex;
   justify-content: flex-end;
   background-position: center;
@@ -174,7 +174,7 @@ body {
   border-radius: 20px 20px 0 0;
 }
 .restaurant__card__img--delice {
-  background: url(./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+  background: url(../../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
   display: flex;
   justify-content: flex-end;
   background-position: center;
