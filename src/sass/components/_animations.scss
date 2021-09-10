@@ -6,10 +6,10 @@
   font-size: 1.5rem;
   opacity: 1;
   &:hover .fade__out {
-    animation: fade-out 0.4s both;
+    animation: fade-out 0.2s both;
   }
   &:hover .fill__in {
-    animation: fill-up 0.4s cubic-bezier(0, 0.3, 0.6, 1) both;
+    animation: fill-up 0.2s linear both;
   }
 }
 

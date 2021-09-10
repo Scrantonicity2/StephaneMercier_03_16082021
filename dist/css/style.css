@@ -93,22 +93,59 @@ body {
 }
 @keyframes fade-out {
   0% {
-    transform: scale(1);
-    transform: rotate(0);
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
   }
   100% {
-    transform: scale(0);
     opacity: 0;
-    transform: rotate(360deg);
   }
 }
 @keyframes fill-up {
   0% {
-    transform: rotate(0deg);
+    transform: scaleY(0);
+  }
+  10% {
+    transform: scaleY(0.1);
+  }
+  20% {
+    transform: scaleY(0.2);
+  }
+  30% {
+    transform: scaleY(0.3);
+  }
+  40% {
+    transform: scaleY(0.4);
+  }
+  50% {
+    transform: scaleY(0.5);
+  }
+  60% {
+    transform: scaleY(0.6);
+  }
+  70% {
+    transform: scaleY(0.7);
+  }
+  80% {
+    transform: scaleY(0.8);
+  }
+  90% {
+    transform: scaleY(0.9);
   }
   100% {
     opacity: 1;
-    transform: rotate(360deg) translateY(2px);
+    transform-origin: 50% bottom;
+    transform: scaleY(1);
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 1024px) {
@@ -154,16 +191,6 @@ body {
   border-radius: 20px 20px 0 0;
 }
 .restaurant__card__img--note {
-  background: url(../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
-  display: flex;
-  justify-content: flex-end;
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 180px;
-  border-radius: 20px 20px 0 0;
-}
-.restaurant__card__img--francaise {
   background: url(../../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
   display: flex;
   justify-content: flex-end;
@@ -173,8 +200,18 @@ body {
   height: 180px;
   border-radius: 20px 20px 0 0;
 }
+.restaurant__card__img--francaise {
+  background: url(../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+  display: flex;
+  justify-content: flex-end;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 180px;
+  border-radius: 20px 20px 0 0;
+}
 .restaurant__card__img--delice {
-  background: url(../../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+  background: url(/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
   display: flex;
   justify-content: flex-end;
   background-position: center;
@@ -343,47 +380,6 @@ body {
   animation-delay: 1.8s;
 }
 
-.loader {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.9);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: loader 1.2s linear both;
-  animation-delay: 2s;
-}
-
-.loader--spinner {
-  position: relative;
-  width: 250px;
-  height: 250px;
-  border: 5px solid #eeeeee;
-  border-radius: 250px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.loader--spinner ::after {
-  content: "";
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
-  border-radius: 250px;
-  border-top: 5px double #99e2d0;
-  border-left: 5px double #9356dc;
-  border-right: 5px double #ff79da;
-  border-bottom: 5px double black;
-  animation: loader--spinner 1.5s ease infinite;
-}
-
-.loader--logo img {
-  animation: logo 2.5s both;
-}
-
 .btn__radient {
   display: flex;
   align-items: center;
@@ -484,22 +480,59 @@ body {
 }
 @keyframes fade-out {
   0% {
-    transform: scale(1);
-    transform: rotate(0);
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
   }
   100% {
-    transform: scale(0);
     opacity: 0;
-    transform: rotate(360deg);
   }
 }
 @keyframes fill-up {
   0% {
-    transform: rotate(0deg);
+    transform: scaleY(0);
+  }
+  10% {
+    transform: scaleY(0.1);
+  }
+  20% {
+    transform: scaleY(0.2);
+  }
+  30% {
+    transform: scaleY(0.3);
+  }
+  40% {
+    transform: scaleY(0.4);
+  }
+  50% {
+    transform: scaleY(0.5);
+  }
+  60% {
+    transform: scaleY(0.6);
+  }
+  70% {
+    transform: scaleY(0.7);
+  }
+  80% {
+    transform: scaleY(0.8);
+  }
+  90% {
+    transform: scaleY(0.9);
   }
   100% {
     opacity: 1;
-    transform: rotate(360deg) translateY(2px);
+    transform-origin: 50% bottom;
+    transform: scaleY(1);
   }
 }
 .heart__anim {
@@ -509,10 +542,10 @@ body {
   opacity: 1;
 }
 .heart__anim:hover .fade__out {
-  animation: fade-out 0.4s both;
+  animation: fade-out 0.2s both;
 }
 .heart__anim:hover .fill__in {
-  animation: fill-up 0.4s cubic-bezier(0, 0.3, 0.6, 1) both;
+  animation: fill-up 0.2s linear both;
 }
 
 .fill__in {
@@ -575,7 +608,7 @@ body {
 }
 
 .marker__icon {
-  margin-right: 20px;
+  margin: 0 20px 0 40px;
 }
 
 .location__block__text {
@@ -584,6 +617,11 @@ body {
 }
 
 .location__block__text__spec {
+  border: none;
+  background-color: #eeeeee;
+  margin-left: 10px;
+}
+.location__block__text__spec ::placeholder {
   font-weight: 500;
 }
 
@@ -698,6 +736,7 @@ body {
   color: #9356dc;
   opacity: 1;
 }
+
 .btn__number {
   width: 30px;
   height: 30px;
@@ -947,22 +986,59 @@ body {
 }
 @keyframes fade-out {
   0% {
-    transform: scale(1);
-    transform: rotate(0);
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
   }
   100% {
-    transform: scale(0);
     opacity: 0;
-    transform: rotate(360deg);
   }
 }
 @keyframes fill-up {
   0% {
-    transform: rotate(0deg);
+    transform: scaleY(0);
+  }
+  10% {
+    transform: scaleY(0.1);
+  }
+  20% {
+    transform: scaleY(0.2);
+  }
+  30% {
+    transform: scaleY(0.3);
+  }
+  40% {
+    transform: scaleY(0.4);
+  }
+  50% {
+    transform: scaleY(0.5);
+  }
+  60% {
+    transform: scaleY(0.6);
+  }
+  70% {
+    transform: scaleY(0.7);
+  }
+  80% {
+    transform: scaleY(0.8);
+  }
+  90% {
+    transform: scaleY(0.9);
   }
   100% {
     opacity: 1;
-    transform: rotate(360deg) translateY(2px);
+    transform-origin: 50% bottom;
+    transform: scaleY(1);
   }
 }
 

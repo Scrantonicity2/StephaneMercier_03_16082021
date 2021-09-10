@@ -13,7 +13,7 @@
 }
 
 .marker__icon {
-  margin-right: 20px;
+  margin: 0 20px 0 40px;
 }
 
 .location__block__text {
@@ -22,7 +22,12 @@
 }
 
 .location__block__text__spec {
-  font-weight: 500;
+  border: none;
+  background-color: $background-grey;
+  margin-left: 10px;
+  ::placeholder {
+    font-weight: 500;
+  }
 }
 
 .reservation__howTo__block {
@@ -116,13 +121,11 @@
 .functionning__menu__btn__main {
   margin-bottom: 10px;
   :hover {
-    background: #e4d5f6;
+    background: $hover-btn;
   }
   :hover .btn__icon {
     color: $primary-color;
     opacity: 1;
-  }
-  @media only screen and (min-width: 1025px) {
   }
 }
 
