@@ -144,8 +144,8 @@ body {
   }
   100% {
     opacity: 1;
-    transform-origin: 50% bottom;
-    transform: scaleY(1);
+    transform-origin: bottom;
+    transform: translateY(3px);
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 1024px) {
@@ -531,8 +531,8 @@ body {
   }
   100% {
     opacity: 1;
-    transform-origin: 50% bottom;
-    transform: scaleY(1);
+    transform-origin: bottom;
+    transform: translateY(3px);
   }
 }
 .heart__anim {
@@ -1037,8 +1037,8 @@ body {
   }
   100% {
     opacity: 1;
-    transform-origin: 50% bottom;
-    transform: scaleY(1);
+    transform-origin: bottom;
+    transform: translateY(3px);
   }
 }
 
