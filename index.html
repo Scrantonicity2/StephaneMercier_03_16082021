@@ -23,7 +23,7 @@
     <div class="loader">
       <div class="loader--spinner">
         <div class="loader--logo">
-          <img src="./images/logo/ohmyfood@2x.svg" />
+          <img src="./images/logo/ohmyfood@2x.svg" alt="logo OHMYFOOD" />
         </div>
       </div>
     </div>
@@ -41,12 +41,17 @@
     </header>
     <main>
       <!-- Map marker and City Location -->
-      <section class="location__block">
+      <div class="location__block">
         <div class="location__block__text">
           <span class="fas fa-map-marker-alt marker__icon"></span>
-          <input type="text" placeholder="Paris, Bellevile" class="location__block__text__spec"></input>
+          <input
+            type="text"
+            placeholder="Paris, Belleville"
+            class="location__block__text__spec"
+            maxlength="30"
+          />
         </div>
-      </section>
+      </div>
       <div class="reservation__howTo__block">
         <!-- Reservation Menu and Button leading to Restaurants Section -->
         <section class="nav__menu">
@@ -55,9 +60,9 @@
             Découvrez des restaurants d'exception, séléctionnés par nos soins.
           </p>
           <!-- Explore Button -->
-          <button class="btn__radient">
-            <a href="#anchor__restaurants__list">Explorer nos restaurants</a>
-          </button>
+          <a href="#anchor__restaurants__list">
+            <div class="btn__radient">Explorer nos restaurants</div>
+          </a>
         </section>
         <!-- "How to" section -->
         <section class="contain__howTo__block">
@@ -94,7 +99,7 @@
         <div class="container">
           <h1>Restaurants</h1>
           <div class="display__card">
-            <article class="card">
+            <div class="card">
               <a href="./pages/palette.html" class="restaurant__card__anchor">
                 <div class="restaurant__card__img">
                   <div class="img__caption">Nouveau</div>
@@ -110,8 +115,8 @@
                   <div class="restaurant__card__location">Ménilmontant</div>
                 </div>
               </a>
-            </article>
-            <article class="card">
+            </div>
+            <div class="card">
               <a href="./pages/note.html" class="restaurant__card__anchor">
                 <div class="restaurant__card__img--note">
                   <div class="img__caption">Nouveau</div>
@@ -127,8 +132,8 @@
                   <div class="restaurant__card__location">Charonne</div>
                 </div>
               </a>
-            </article>
-            <article class="card">
+            </div>
+            <div class="card">
               <a href="./pages/francaise.html" class="restaurant__card__anchor">
                 <div class="restaurant__card__img--francaise"></div>
                 <div class="restaurant__card__info">
@@ -142,8 +147,8 @@
                   <div class="restaurant__card__location">Cité Rouge</div>
                 </div>
               </a>
-            </article>
-            <article class="card">
+            </div>
+            <div class="card">
               <a href="./pages/delice.html" class="restaurant__card__anchor">
                 <div class="restaurant__card__img--delice"></div>
                 <div class="restaurant__card__info">
@@ -157,34 +162,34 @@
                   <div class="restaurant__card__location">Folie-Méricourt</div>
                 </div>
               </a>
-            </article>
+            </div>
           </div>
         </div>
       </section>
     </main>
-  </body>
-  <!-- Footer dark Bg and white color font -->
-  <footer>
-    <section class="footer__menu">
-      <div class="logo__footer">
-        <img
-          class="logo__footer--white"
-          src="./images/logo/ohmyfood@2x.svg"
-          alt="logo Ohmyfood"
-        />
+    <!-- Footer dark Bg and white color font -->
+    <footer>
+      <div class="footer__menu">
+        <div class="logo__footer">
+          <img
+            class="logo__footer--white"
+            src="./images/logo/ohmyfood@2x.svg"
+            alt="logo Ohmyfood"
+          />
+        </div>
+        <a href="#" class="footer__option">
+          <span class="fas fa-utensils footer__icon"></span
+          ><span class="icon__text">Proposer un restaurant</span>
+        </a>
+        <a href="#" class="footer__option">
+          <span class="fas fa-handshake footer__icon"></span
+          ><span>Devenir partenaire</span>
+        </a>
+        <a href="#" class="footer__option">Mentions légales</a>
+        <a href="mailto:stefane.mercier@gmail.com" class="footer__option"
+          >Contact</a
+        >
       </div>
-      <a href="#" class="footer__option">
-        <span class="fas fa-utensils footer__icon"></span
-        ><span class="icon__text">Proposer un restaurant</span>
-      </a>
-      <a href="#" class="footer__option">
-        <span class="fas fa-handshake footer__icon"></span
-        ><span>Devenir partenaire</span>
-      </a>
-      <a href="#" class="footer__option">Mentions légales</a>
-      <a href="mailto:stefane.mercier@gmail.com" class="footer__option"
-        >Contact</a
-      >
-    </section>
-  </footer>
+    </footer>
+  </body>
 </html>

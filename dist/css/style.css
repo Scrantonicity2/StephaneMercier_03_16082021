@@ -476,6 +476,9 @@ body {
 }
 
 .order__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1rem;
   cursor: pointer;
   width: 200px;
