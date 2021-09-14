@@ -225,7 +225,7 @@ body {
   border-radius: 20px 20px 0 0;
 }
 .restaurant__card__img--delice {
-  background: url(/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+  background: url(../../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
   display: flex;
   justify-content: flex-end;
   background-position: center;
