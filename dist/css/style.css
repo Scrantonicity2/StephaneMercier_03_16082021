@@ -629,6 +629,7 @@ body {
   -webkit-text-fill-color: transparent;
   position: absolute;
   right: 0px;
+  top: 3px;
   opacity: 0;
   color: linear-gradient(165deg, #ff79da, #9356dc);
 }
