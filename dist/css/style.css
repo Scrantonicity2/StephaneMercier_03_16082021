@@ -696,8 +696,9 @@ body {
   background-color: #eeeeee;
   margin-left: 10px;
 }
-.location__block__text__spec ::placeholder {
-  font-weight: 500;
+.location__block__text__spec::placeholder {
+  color: black;
+  font-weight: 800;
 }
 
 @media only screen and (min-width: 576px) and (max-width: 1024px) {
