@@ -160,7 +160,6 @@ body {
   100% {
     opacity: 1;
     transform-origin: bottom;
-    transform: translateY(2px);
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 1024px) {
@@ -606,7 +605,6 @@ body {
   100% {
     opacity: 1;
     transform-origin: bottom;
-    transform: translateY(2px);
   }
 }
 .heart__anim {
@@ -632,7 +630,7 @@ body {
   -webkit-text-fill-color: transparent;
   position: absolute;
   right: 0px;
-  top: 3px;
+  top: 2px;
   opacity: 0;
   color: linear-gradient(165deg, #ff79da, #9356dc);
 }
@@ -699,6 +697,7 @@ body {
 .location__block__text__spec::placeholder {
   color: black;
   font-weight: 800;
+  font-size: 1rem;
 }
 
 @media only screen and (min-width: 576px) and (max-width: 1024px) {
@@ -1129,7 +1128,6 @@ body {
   100% {
     opacity: 1;
     transform-origin: bottom;
-    transform: translateY(2px);
   }
 }
 
