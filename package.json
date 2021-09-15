@@ -4,7 +4,8 @@
   "description": "Projet 3 du parcours Developpeur Web sur OpenClassRoom",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./src/sass/main.scss:./dist/css/style.css",
+    "sass-dev": "sass --watch ./src/sass/main.scss:./dist/css/style.css",
+    "sass-prod": "sass ./src/sass/main.scss:./dist/css/style.css --style compressed",
     "prefix": "postcss ./dist/css/style.css --use=autoprefixer --map=false --output=./dist/css/prefixed/"
   },
   "repository": {
@@ -26,5 +27,8 @@
   "homepage": "https://github.com/Scrantonicity2/StephaneMercier_03_16082021#readme",
   "devDependencies": {
     "sass": "^1.38.0"
+  },
+  "dependencies": {
+    "postcss": "^8.3.6"
   }
 }
