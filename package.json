@@ -27,9 +27,7 @@
   },
   "homepage": "https://github.com/Scrantonicity2/StephaneMercier_03_16082021#readme",
   "devDependencies": {
-    "sass": "^1.38.0"
-  },
-  "dependencies": {
+    "sass": "^1.38.0",
     "autoprefixer": "^10.3.4",
     "postcss": "^8.3.6",
     "postcss-cli": "^8.3.1"
