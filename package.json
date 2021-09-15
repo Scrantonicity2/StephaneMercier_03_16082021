@@ -6,7 +6,8 @@
   "scripts": {
     "sass-dev": "sass --watch ./src/sass/main.scss:./dist/css/style.css",
     "sass-prod": "sass ./src/sass/main.scss:./dist/css/style.css --style compressed",
-    "prefix": "postcss ./dist/css/style.css --use=autoprefixer --map=false --output=./dist/css/prefixed/"
+    "prefix": "postcss ./dist/css/style.css --use=autoprefixer --map=false --o=./dist/css/style.css",
+    "prod": "npm run sass-prod && npm run prefix"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,8 @@
     "sass": "^1.38.0"
   },
   "dependencies": {
-    "postcss": "^8.3.6"
+    "autoprefixer": "^10.3.4",
+    "postcss": "^8.3.6",
+    "postcss-cli": "^8.3.1"
   }
 }
